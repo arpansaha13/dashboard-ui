@@ -34,9 +34,10 @@ import Person9 from '../components/rightPanel/Images/person9.svg'
 import Person10 from '../components/rightPanel/Images/person10.svg'
 import Person11 from '../components/rightPanel/Images/person11.svg'
 import { initialData, columns } from '../components/orderTable/data'
-import { AppContext } from '../context/AppContext'
 
 const OrdersTable = () => {
+  const isDark = useAppSelector(selectIsDark)
+
   const [data, setData] = useState(initialData)
   const [searchInput, setSearchInput] = useState('')
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -51,7 +52,6 @@ const OrdersTable = () => {
   })
   const [menuAnchor, setMenuAnchor] = useState(null)
   const [isFilterOpen, setIsFilterOpen] = useState(false)
-  const { isDarkMode } = useContext(AppContext)
 
   // PAGINATION STATE
   const [currentPage, setCurrentPage] = useState(1)
@@ -180,32 +180,30 @@ const OrdersTable = () => {
 
   return (
     <main className="flex h-full max-h-[90vh] flex-col gap-4 overflow-y-scroll [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-      <h4 className={isDarkMode ? 'text-light' : 'text-dark'}>Order List</h4>
+      <h4 className={isDark ? 'text-light' : 'text-dark'}>Order List</h4>
       <Paper
         elevation={3}
         sx={{
           borderRadius: '12px',
           overflow: 'hidden',
-          bgcolor: isDarkMode ? '#1e1e1e' : '#FFFFFF',
+          bgcolor: isDark ? '#1e1e1e' : '#FFFFFF',
         }}
       >
         <Toolbar
           sx={{
             justifyContent: 'space-between',
-            bgcolor: isDarkMode ? '#FFFFFF0D' : '#F7F9FB',
+            bgcolor: isDark ? '#FFFFFF0D' : '#F7F9FB',
           }}
         >
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
             <IconButton onClick={handleOpenModal}>
-              <Add sx={{ color: isDarkMode ? 'white' : 'black' }} />
+              <Add sx={{ color: isDark ? 'white' : 'black' }} />
             </IconButton>
             <IconButton onClick={toggleFilter}>
-              <FilterList sx={{ color: isDarkMode ? 'white' : 'black' }} />
+              <FilterList sx={{ color: isDark ? 'white' : 'black' }} />
             </IconButton>
             <IconButton {...headerGroups[0].headers[1].getSortByToggleProps()}>
-              <SortByAlphaTwoTone
-                sx={{ color: isDarkMode ? 'white' : 'black' }}
-              />
+              <SortByAlphaTwoTone sx={{ color: isDark ? 'white' : 'black' }} />
             </IconButton>
           </Box>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
@@ -218,7 +216,7 @@ const OrdersTable = () => {
               InputProps={{ sx: { bgcolor: 'white', borderRadius: 2 } }}
             />
             <IconButton onClick={handleMenuOpen}>
-              <MoreVert sx={{ color: isDarkMode ? 'white' : 'black' }} />
+              <MoreVert sx={{ color: isDark ? 'white' : 'black' }} />
             </IconButton>
             <Menu
               anchorEl={menuAnchor}
@@ -232,13 +230,11 @@ const OrdersTable = () => {
         </Toolbar>
 
         {isFilterOpen && (
-          <Box
-            sx={{ p: 2, backgroundColor: isDarkMode ? '#2a2a2a' : '#F7F9FB' }}
-          >
+          <Box sx={{ p: 2, backgroundColor: isDark ? '#2a2a2a' : '#F7F9FB' }}>
             <Typography
               variant="body2"
               mb={1}
-              sx={{ color: isDarkMode ? 'white' : 'black' }}
+              sx={{ color: isDark ? 'white' : 'black' }}
             >
               Filter by Project:
             </Typography>
@@ -282,8 +278,8 @@ const OrdersTable = () => {
                   <TableCell
                     {...column.getHeaderProps(column.getSortByToggleProps())}
                     sx={{
-                      color: isDarkMode ? 'white' : '#1C1C1C66',
-                      borderBottom: isDarkMode
+                      color: isDark ? 'white' : '#1C1C1C66',
+                      borderBottom: isDark
                         ? '1px solid #444'
                         : '1px solid #ddd',
                     }}
@@ -301,7 +297,7 @@ const OrdersTable = () => {
                   <TableRow
                     {...row.getRowProps()}
                     sx={{
-                      backgroundColor: isDarkMode
+                      backgroundColor: isDark
                         ? row.index % 2 === 0
                           ? '#333'
                           : '#1e1e1e'
@@ -319,8 +315,8 @@ const OrdersTable = () => {
                       <TableCell
                         {...cell.getCellProps()}
                         sx={{
-                          color: isDarkMode ? 'white' : 'black',
-                          borderBottom: isDarkMode
+                          color: isDark ? 'white' : 'black',
+                          borderBottom: isDark
                             ? '1px solid #444'
                             : '1px solid #ddd',
                         }}
@@ -428,7 +424,7 @@ const OrdersTable = () => {
           onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
           disabled={currentPage === 1}
           sx={{
-            'color': isDarkMode ? 'white' : 'black',
+            'color': isDark ? 'white' : 'black',
             'bgcolor': 'transparent',
             '&:disabled': { opacity: 0.3 },
           }}
@@ -450,16 +446,16 @@ const OrdersTable = () => {
                 borderRadius: '8px',
                 backgroundColor:
                   currentPage === num
-                    ? isDarkMode
+                    ? isDark
                       ? '#a2a1d2ff'
                       : '#1C1C1C66'
                     : 'transparent',
                 color:
                   currentPage === num
-                    ? isDarkMode
+                    ? isDark
                       ? 'white'
                       : 'black'
-                    : isDarkMode
+                    : isDark
                       ? 'white'
                       : 'black',
                 cursor: currentPage === num ? 'default' : 'pointer',
@@ -474,7 +470,7 @@ const OrdersTable = () => {
           onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
           disabled={currentPage === totalPages}
           sx={{
-            'color': isDarkMode ? 'white' : 'black',
+            'color': isDark ? 'white' : 'black',
             'bgcolor': 'transparent',
             '&:disabled': { opacity: 0.3 },
           }}

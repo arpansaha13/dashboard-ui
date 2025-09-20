@@ -8,8 +8,10 @@ import {
   ResponsiveContainer,
 } from 'recharts'
 import Card from '../Card'
-import { LineChartdata } from './data.tsx'
 import Divider from '../Divider.tsx'
+import { useAppSelector } from '../../store/hooks.ts'
+import { selectIsDark } from '../../store/features/dark/dark.slice.ts'
+import { LineChartdata } from './data.tsx'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const CustomTooltip = ({ active, payload }: any) => {
@@ -36,7 +38,9 @@ const CustomTooltip = ({ active, payload }: any) => {
   return null
 }
 
-const RevenueChart = ({ isDarkMode }: { isDarkMode: boolean }) => {
+const RevenueChart = () => {
+  const isDark = useAppSelector(selectIsDark)
+
   return (
     <Card>
       <div className="mb-2.5 flex items-center gap-3">
@@ -58,7 +62,7 @@ const RevenueChart = ({ isDarkMode }: { isDarkMode: boolean }) => {
             dataKey="month"
             tickLine={false}
             tick={{
-              fill: isDarkMode ? '#FFFFFF66' : '#1C1C1C66',
+              fill: isDark ? '#FFFFFF66' : '#1C1C1C66',
               dy: 12,
               fontSize: 12,
             }}
@@ -70,7 +74,7 @@ const RevenueChart = ({ isDarkMode }: { isDarkMode: boolean }) => {
             domain={[0, 30]}
             ticks={[0, 10, 20, 30]}
             tick={{
-              fill: isDarkMode ? '#FFFFFF66' : '#1C1C1C66',
+              fill: isDark ? '#FFFFFF66' : '#1C1C1C66',
               dx: -12,
               fontSize: 12,
             }}
@@ -80,7 +84,7 @@ const RevenueChart = ({ isDarkMode }: { isDarkMode: boolean }) => {
           <Line
             type="monotone"
             dataKey="currentWeek"
-            stroke={isDarkMode ? '#A8C5DA' : '#000'}
+            stroke={isDark ? '#A8C5DA' : '#000'}
             strokeWidth={3}
             dot={false}
             activeDot={{ r: 5 }}
@@ -89,7 +93,7 @@ const RevenueChart = ({ isDarkMode }: { isDarkMode: boolean }) => {
           <Line
             type="monotone"
             dataKey="previousWeek"
-            stroke={isDarkMode ? '#C6C7F8' : '#8da4c9'}
+            stroke={isDark ? '#C6C7F8' : '#8da4c9'}
             strokeWidth={3}
             dot={false}
             strokeDasharray=""

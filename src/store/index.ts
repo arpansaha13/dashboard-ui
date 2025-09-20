@@ -1,8 +1,9 @@
 import type { Action, ThunkAction } from '@reduxjs/toolkit'
 import { combineSlices, configureStore } from '@reduxjs/toolkit'
 import { setupListeners } from '@reduxjs/toolkit/query'
+import { darkSlice } from './features/dark/dark.slice'
 
-const rootReducer = combineSlices()
+const rootReducer = combineSlices(darkSlice)
 
 export type RootState = ReturnType<typeof rootReducer>
 

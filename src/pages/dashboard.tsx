@@ -17,11 +17,11 @@ const Dashboard = () => {
       </section>
 
       <section className="col-span-2">
-        <ProjectionsVsActualsChart isDarkMode={false} />
+        <ProjectionsVsActualsChart />
       </section>
 
       <section className="col-span-3">
-        <RevenueChart isDarkMode={false} />
+        <RevenueChart />
       </section>
 
       <section>

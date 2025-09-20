@@ -3,6 +3,8 @@ import RaiseIcon from './navbar/icons/ArrowRise.svg'
 import RaiseDown from './navbar/icons/ArrowDown.svg'
 import RaiseIconDark from './navbar/icons/ArrowRise-dark.svg'
 import RaiseDownDark from './navbar/icons/ArrowDown-dark.svg'
+import { useAppSelector } from '../store/hooks'
+import { selectIsDark } from '../store/features/dark/dark.slice'
 import { classNames } from '../utils'
 
 const cardData = [
@@ -49,7 +51,7 @@ const cardData = [
 ]
 
 const Stats = () => {
-  const isDarkMode = true
+  const isDark = useAppSelector(selectIsDark)
 
   return cardData.map(card => (
     <Link
@@ -69,7 +71,7 @@ const Stats = () => {
           <div className="flex items-center gap-[5px] text-xs">
             {card.subCount}
             <img
-              src={isDarkMode ? card.darkIcon : card.icon}
+              src={isDark ? card.darkIcon : card.icon}
               alt={card.type}
               className="size-4"
             />

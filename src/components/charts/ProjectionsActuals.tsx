@@ -7,10 +7,14 @@ import {
   ResponsiveContainer,
   YAxis,
 } from 'recharts'
+import { useAppSelector } from '../../store/hooks'
+import { selectIsDark } from '../../store/features/dark/dark.slice'
 import Card from '../Card'
 import { BarChartdata } from './data'
 
-const ProjectionsVsActualsChart = ({ isDarkMode }: { isDarkMode: boolean }) => {
+const ProjectionsVsActualsChart = () => {
+  const isDark = useAppSelector(selectIsDark)
+
   return (
     <Card title="Projections vs Actuals">
       <ResponsiveContainer width="100%" height={180}>
@@ -27,9 +31,9 @@ const ProjectionsVsActualsChart = ({ isDarkMode }: { isDarkMode: boolean }) => {
           <XAxis
             dataKey="month"
             tickLine={false}
-            stroke={isDarkMode ? '#FFFFFF66' : '#1C1C1C66'}
+            stroke={isDark ? '#FFFFFF66' : '#1C1C1C66'}
             tick={{
-              fill: isDarkMode ? '#FFFFFF66' : '#1C1C1C66',
+              fill: isDark ? '#FFFFFF66' : '#1C1C1C66',
               dy: 8,
               fontSize: 12,
             }}
@@ -39,7 +43,7 @@ const ProjectionsVsActualsChart = ({ isDarkMode }: { isDarkMode: boolean }) => {
             width={30}
             tickLine={false}
             tick={{
-              fill: isDarkMode ? '#FFFFFF66' : '#1C1C1C66',
+              fill: isDark ? '#FFFFFF66' : '#1C1C1C66',
               dx: -5,
               dy: -5,
               fontSize: 12,

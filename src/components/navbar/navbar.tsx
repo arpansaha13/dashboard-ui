@@ -13,6 +13,8 @@ import RecentIconDark from './icons/activity-dark.svg'
 import NotificationIconDark from './icons/notification-dark.svg'
 import SearchIconImgDark from './icons/search-dark.svg'
 import BreadCrumbs from '../breadCrumbs'
+import { useAppDispatch, useAppSelector } from '../../store/hooks'
+import { selectIsDark, toggle } from '../../store/features/dark/dark.slice'
 import { AppContext } from '../../context/AppContext'
 
 function Navbar() {
@@ -23,9 +25,10 @@ function Navbar() {
     rightPanelView,
     setRightPanelView,
     isMobile,
-    isDarkMode,
-    // setIsDarkMode,
   } = useContext(AppContext)
+
+  const dispatch = useAppDispatch()
+  const isDark = useAppSelector(selectIsDark)
 
   const handleLeftPanelToggle = () => {
     if (isMobile) {
@@ -50,7 +53,7 @@ function Navbar() {
   }
 
   const handleDarkMode = () => {
-    document.body.classList.toggle('dark')
+    dispatch(toggle())
   }
 
   return (
@@ -61,7 +64,7 @@ function Navbar() {
             <img
               data-tooltip-id="leftPanelTooltip"
               data-tooltip-content="Toggle Left Panel"
-              src={isDarkMode ? LeftPanelViewDark : LeftPanelView}
+              src={isDark ? LeftPanelViewDark : LeftPanelView}
               alt="left-view"
               className="navbar-left-toggle size-icon"
             />
@@ -70,7 +73,7 @@ function Navbar() {
             <img
               data-tooltip-id="favTooltip"
               data-tooltip-content="Favorites"
-              src={isDarkMode ? FavIconDark : FavIcon}
+              src={isDark ? FavIconDark : FavIcon}
               alt="fav"
               className="navbar-fav size-icon"
             />
@@ -82,7 +85,7 @@ function Navbar() {
           <div className="xs:block navbar-search-bar relative hidden">
             <img
               className="size-icon pointer-events-none absolute top-1/2 left-2.5 -translate-y-1/2"
-              src={isDarkMode ? SearchIconImgDark : SearchIconImg}
+              src={isDark ? SearchIconImgDark : SearchIconImg}
               alt="search"
             />
             <input
@@ -100,7 +103,7 @@ function Navbar() {
               className="size-icon"
               data-tooltip-id="themeTooltip"
               data-tooltip-content="Switch Theme"
-              src={isDarkMode ? ThemeIconDark : ThemeIcon}
+              src={isDark ? ThemeIconDark : ThemeIcon}
               alt="theme"
             />
           </button>
@@ -108,7 +111,7 @@ function Navbar() {
             <img
               data-tooltip-id="recentTooltip"
               data-tooltip-content="Recent Activities"
-              src={isDarkMode ? RecentIconDark : RecentIcon}
+              src={isDark ? RecentIconDark : RecentIcon}
               alt="recent"
               className="size-icon"
             />
@@ -118,7 +121,7 @@ function Navbar() {
               className="size-icon"
               data-tooltip-id="notificationTooltip"
               data-tooltip-content="Notifications"
-              src={isDarkMode ? NotificationIconDark : NotificationIcon}
+              src={isDark ? NotificationIconDark : NotificationIcon}
               alt="notification"
             />
           </button>
@@ -127,7 +130,7 @@ function Navbar() {
               className="size-icon"
               data-tooltip-id="rightPanelTooltip"
               data-tooltip-content="Toggle Right Panel"
-              src={isDarkMode ? LeftPanelViewDark : LeftPanelView}
+              src={isDark ? LeftPanelViewDark : LeftPanelView}
               alt="Right-view"
             />
           </button>
