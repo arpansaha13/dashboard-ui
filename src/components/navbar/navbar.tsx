@@ -12,7 +12,7 @@ import ThemeIconDark from './icons/theme-dark.svg'
 import RecentIconDark from './icons/activity-dark.svg'
 import NotificationIconDark from './icons/notification-dark.svg'
 import SearchIconImgDark from './icons/search-dark.svg'
-import BreadCrumbs from '../breadCrumbs/BreadCrumbs'
+import BreadCrumbs from '../breadCrumbs'
 import { AppContext } from '../../context/AppContext'
 
 function Navbar() {
