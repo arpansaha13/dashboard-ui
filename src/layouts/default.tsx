@@ -1,8 +1,8 @@
 import { Outlet } from 'react-router-dom'
 import Panel from '../components/Panel'
-import Navbar from '../components/navbar/navbar'
+import Navbar from '../components/Navbar'
 import LeftPanel from '../components/LeftPanel'
-import RightPanel from '../components/rightPanel/rightPanel'
+import RightPanel from '../components/RightPanel'
 import { useAppSelector } from '../store/hooks'
 import {
   selectLeftPanelOpen,

@@ -1,8 +1,4 @@
 import { Link } from 'react-router-dom'
-import RaiseIcon from './navbar/icons/ArrowRise.svg'
-import RaiseDown from './navbar/icons/ArrowDown.svg'
-import RaiseIconDark from './navbar/icons/ArrowRise-dark.svg'
-import RaiseDownDark from './navbar/icons/ArrowDown-dark.svg'
 import { useAppSelector } from '../store/hooks'
 import { selectIsDark } from '../store/features/dark/dark.slice'
 import { classNames } from '../utils'
@@ -14,8 +10,8 @@ const cardData = [
     count: '3,781',
     subCount: '+11.01%',
     color: 'text-dark bg-[#e3f5ff]',
-    icon: RaiseIcon,
-    darkIcon: RaiseIconDark,
+    icon: '/icons/stats/ArrowRise.svg',
+    darkIcon: '/icons/stats/ArrowRise.svg',
     to: '#',
   },
   {
@@ -24,8 +20,8 @@ const cardData = [
     count: '1,219',
     subCount: '-0.03%',
     color: 'bg-[#f7f9fb] dark:bg-light/5',
-    icon: RaiseDown,
-    darkIcon: RaiseDownDark,
+    icon: '/icons/stats/ArrowDown.svg',
+    darkIcon: '/icons/stats/ArrowDown-dark.svg',
     to: '/orders',
   },
   {
@@ -34,8 +30,8 @@ const cardData = [
     count: '$695',
     subCount: '+15.03%',
     color: 'bg-[#f7f9fb] dark:bg-light/5',
-    icon: RaiseIcon,
-    darkIcon: RaiseIconDark,
+    icon: '/icons/stats/ArrowRise.svg',
+    darkIcon: '/icons/stats/ArrowRise-dark.svg',
     to: '#',
   },
   {
@@ -44,8 +40,8 @@ const cardData = [
     count: '30.1%',
     subCount: '+6.08%',
     color: 'text-dark bg-[#e5ecf6]',
-    icon: RaiseIcon,
-    darkIcon: RaiseIconDark,
+    icon: '/icons/stats/ArrowRise.svg',
+    darkIcon: '/icons/stats/ArrowRise.svg',
     to: '#',
   },
 ]

@@ -1,24 +1,12 @@
 import { useRef } from 'react'
 import { Tooltip } from 'react-tooltip'
-import FavIcon from './icons/fav.svg'
-import LeftPanelView from './icons/Sidebar.svg'
-import ThemeIcon from './icons/theme.svg'
-import RecentIcon from './icons/recent.svg'
-import NotificationIcon from './icons/notification.svg'
-import SearchIconImg from './icons/search.svg'
-import FavIconDark from './icons/fav-dark.svg'
-import LeftPanelViewDark from './icons/left-panel-dark.svg'
-import ThemeIconDark from './icons/theme-dark.svg'
-import RecentIconDark from './icons/activity-dark.svg'
-import NotificationIconDark from './icons/notification-dark.svg'
-import SearchIconImgDark from './icons/search-dark.svg'
-import BreadCrumbs from '../breadCrumbs'
-import { useAppDispatch, useAppSelector } from '../../store/hooks'
-import { selectIsDark, toggleDark } from '../../store/features/dark/dark.slice'
+import BreadCrumbs from './breadCrumbs'
+import { useAppDispatch, useAppSelector } from '../store/hooks'
+import { selectIsDark, toggleDark } from '../store/features/dark/dark.slice'
 import {
   toggleLeftPanel,
   toggleRightPanel,
-} from '../../store/features/layout/layout.slice'
+} from '../store/features/layout/layout.slice'
 
 function Navbar() {
   const searchRef = useRef(null)
@@ -46,7 +34,11 @@ function Navbar() {
             <img
               data-tooltip-id="leftPanelTooltip"
               data-tooltip-content="Toggle Left Panel"
-              src={isDark ? LeftPanelViewDark : LeftPanelView}
+              src={
+                isDark
+                  ? '/icons/navbar/sidebar-dark.svg'
+                  : '/icons/navbar/sidebar.svg'
+              }
               alt="left-view"
               className="navbar-left-toggle size-icon"
             />
@@ -55,7 +47,9 @@ function Navbar() {
             <img
               data-tooltip-id="favTooltip"
               data-tooltip-content="Favorites"
-              src={isDark ? FavIconDark : FavIcon}
+              src={
+                isDark ? '/icons/navbar/fav-dark.svg' : '/icons/navbar/fav.svg'
+              }
               alt="fav"
               className="navbar-fav size-icon"
             />
@@ -67,7 +61,11 @@ function Navbar() {
           <div className="xs:block navbar-search-bar relative hidden">
             <img
               className="size-icon pointer-events-none absolute top-1/2 left-2.5 -translate-y-1/2"
-              src={isDark ? SearchIconImgDark : SearchIconImg}
+              src={
+                isDark
+                  ? '/icons/navbar/search-dark.svg'
+                  : '/icons/navbar/search.svg'
+              }
               alt="search"
             />
             <input
@@ -85,7 +83,11 @@ function Navbar() {
               className="size-icon"
               data-tooltip-id="themeTooltip"
               data-tooltip-content="Switch Theme"
-              src={isDark ? ThemeIconDark : ThemeIcon}
+              src={
+                isDark
+                  ? '/icons/navbar/theme-dark.svg'
+                  : '/icons/navbar/theme.svg'
+              }
               alt="theme"
             />
           </button>
@@ -93,7 +95,11 @@ function Navbar() {
             <img
               data-tooltip-id="recentTooltip"
               data-tooltip-content="Recent Activities"
-              src={isDark ? RecentIconDark : RecentIcon}
+              src={
+                isDark
+                  ? '/icons/navbar/activity-dark.svg'
+                  : '/icons/navbar/recent.svg'
+              }
               alt="recent"
               className="size-icon"
             />
@@ -103,7 +109,11 @@ function Navbar() {
               className="size-icon"
               data-tooltip-id="notificationTooltip"
               data-tooltip-content="Notifications"
-              src={isDark ? NotificationIconDark : NotificationIcon}
+              src={
+                isDark
+                  ? '/icons/navbar/notification-dark.svg'
+                  : '/icons/navbar/notification.svg'
+              }
               alt="notification"
             />
           </button>
@@ -112,7 +122,11 @@ function Navbar() {
               className="size-icon"
               data-tooltip-id="rightPanelTooltip"
               data-tooltip-content="Toggle Right Panel"
-              src={isDark ? LeftPanelViewDark : LeftPanelView}
+              src={
+                isDark
+                  ? '/icons/navbar/sidebar-dark.svg'
+                  : '/icons/navbar/sidebar.svg'
+              }
               alt="Right-view"
             />
           </button>

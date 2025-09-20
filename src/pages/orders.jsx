@@ -29,12 +29,6 @@ import {
 } from '@mui/icons-material'
 import { useAppSelector } from '../store/hooks.ts'
 import { selectIsDark } from '../store/features/dark/dark.slice'
-import Person1 from '../components/rightPanel/Images/person1.svg'
-import Person7 from '../components/rightPanel/Images/person7.svg'
-import Person8 from '../components/rightPanel/Images/person8.svg'
-import Person9 from '../components/rightPanel/Images/person9.svg'
-import Person10 from '../components/rightPanel/Images/person10.svg'
-import Person11 from '../components/rightPanel/Images/person11.svg'
 import { initialData, columns } from '../components/orderTable/data'
 
 const OrdersTable = () => {
@@ -161,17 +155,17 @@ const OrdersTable = () => {
   const getIconForUser = userName => {
     switch (userName) {
       case 'Natali Craig':
-        return Person7
+        return '/avatars/person7.svg'
       case 'Kate Morrison':
-        return Person8
+        return '/avatars/person8.svg'
       case 'Drew Cano':
-        return Person9
+        return '/avatars/person9.svg'
       case 'Orlando Diggs':
-        return Person10
+        return '/avatars/person10.svg'
       case 'Andi Lane':
-        return Person11
+        return '/avatars/person11.svg'
       default:
-        return Person1
+        return '/avatars/person1.svg'
     }
   }
 

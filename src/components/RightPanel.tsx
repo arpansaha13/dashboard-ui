@@ -1,18 +1,3 @@
-import BugIcon from './Images/bug.svg'
-import UserIcon from './Images/User.svg'
-import Broadcast from './Images/Broadcast.svg'
-import Person1 from './Images/person1.svg'
-import Person2 from './Images/person2.svg'
-import Person3 from './Images/person3.svg'
-import Person4 from './Images/person4.svg'
-import Person6 from './Images/person6.svg'
-import Person7 from './Images/person7.svg'
-import Person8 from './Images/person8.svg'
-import Person9 from './Images/person9.svg'
-import Person10 from './Images/person10.svg'
-import Person11 from './Images/person11.svg'
-import Person12 from './Images/person12.svg'
-
 const RightPanel = () => {
   return (
     <aside>
@@ -23,7 +8,7 @@ const RightPanel = () => {
 
         <div className="mb-3 flex cursor-pointer items-center hover:scale-[1.02]">
           <div className="mr-2.5 flex h-5 w-5 items-center justify-center rounded-lg bg-[#e3f5ff] p-1">
-            <img src={BugIcon} alt="icon" className="size-icon" />
+            <img src="/icons/bug.svg" alt="icon" className="size-icon" />
           </div>
           <div className="overflow-hidden text-sm text-ellipsis whitespace-nowrap">
             You have a bug that needs...
@@ -34,7 +19,7 @@ const RightPanel = () => {
         </div>
         <div className="mb-3 flex cursor-pointer items-center hover:scale-[1.02]">
           <div className="mr-2.5 flex h-5 w-5 items-center justify-center rounded-lg bg-[#e3f5ff] p-1">
-            <img src={UserIcon} alt="icon" className="size-icon" />
+            <img src="/icons/user.svg" alt="icon" className="size-icon" />
           </div>
           <div className="overflow-hidden text-sm text-ellipsis whitespace-nowrap">
             New user registered
@@ -45,7 +30,7 @@ const RightPanel = () => {
         </div>
         <div className="mb-3 flex cursor-pointer items-center hover:scale-[1.02]">
           <div className="mr-2.5 flex h-5 w-5 items-center justify-center rounded-lg bg-[#e3f5ff] p-1">
-            <img src={BugIcon} alt="icon" className="size-icon" />
+            <img src="/icons/bug.svg" alt="icon" className="size-icon" />
           </div>
           <div className="overflow-hidden text-sm text-ellipsis whitespace-nowrap">
             You have a bug that needs...
@@ -56,7 +41,7 @@ const RightPanel = () => {
         </div>
         <div className="mb-3 flex cursor-pointer items-center hover:scale-[1.02]">
           <div className="mr-2.5 flex h-5 w-5 items-center justify-center rounded-lg bg-[#e3f5ff] p-1">
-            <img src={Broadcast} alt="icon" className="size-icon" />
+            <img src="/icons/Broadcast.svg" alt="icon" className="size-icon" />
           </div>
           <div className="overflow-hidden text-sm text-ellipsis whitespace-nowrap">
             Andi Lane subscribed to you
@@ -74,7 +59,11 @@ const RightPanel = () => {
         </h2>
         <div className="mb-3 flex cursor-pointer items-start hover:scale-[1.02]">
           <div className="relative mr-2.5 flex flex-col items-center">
-            <img src={Person1} alt="person" className="h-5 w-5 rounded-full" />
+            <img
+              src="/avatars/person1.svg"
+              alt="person"
+              className="h-5 w-5 rounded-full"
+            />
             <div className="bg-dark/10 dark:bg-light/10 absolute top-[27px] bottom-[-20px] left-[9px] w-[1px] grow"></div>
           </div>
           <div className="text-sm">
@@ -86,7 +75,11 @@ const RightPanel = () => {
         </div>
         <div className="mb-3 flex cursor-pointer items-start hover:scale-[1.02]">
           <div className="relative mr-2.5 flex flex-col items-center">
-            <img src={Person2} alt="person" className="h-5 w-5 rounded-full" />
+            <img
+              src="/avatars/person2.svg"
+              alt="person"
+              className="h-5 w-5 rounded-full"
+            />
             <div className="bg-dark/10 dark:bg-light/10 absolute top-[27px] bottom-[-20px] left-[9px] w-[1px] grow"></div>
           </div>
           <div className="text-sm">
@@ -98,7 +91,11 @@ const RightPanel = () => {
         </div>
         <div className="mb-3 flex cursor-pointer items-start hover:scale-[1.02]">
           <div className="relative mr-2.5 flex flex-col items-center">
-            <img src={Person6} alt="person" className="h-5 w-5 rounded-full" />
+            <img
+              src="/avatars/person6.svg"
+              alt="person"
+              className="h-5 w-5 rounded-full"
+            />
             <div className="bg-dark/10 dark:bg-light/10 absolute top-[27px] bottom-[-20px] left-[9px] w-[1px] grow"></div>
           </div>
           <div className="text-sm">
@@ -110,7 +107,11 @@ const RightPanel = () => {
         </div>
         <div className="mb-3 flex cursor-pointer items-start hover:scale-[1.02]">
           <div className="relative mr-2.5 flex flex-col items-center">
-            <img src={Person3} alt="person" className="h-5 w-5 rounded-full" />
+            <img
+              src="/avatars/person3.svg"
+              alt="person"
+              className="h-5 w-5 rounded-full"
+            />
             <div className="bg-dark/10 dark:bg-light/10 absolute top-[27px] bottom-[-20px] left-[9px] w-[1px] grow"></div>
           </div>
           <div className="text-sm">
@@ -122,7 +123,11 @@ const RightPanel = () => {
         </div>
         <div className="mb-3 flex cursor-pointer items-start hover:scale-[1.02]">
           <div className="relative mr-2.5 flex flex-col items-center">
-            <img src={Person4} alt="person" className="h-5 w-5 rounded-full" />
+            <img
+              src="/avatars/person4.svg"
+              alt="person"
+              className="h-5 w-5 rounded-full"
+            />
           </div>
           <div className="text-sm">
             Deleted a page in Project X
@@ -139,7 +144,7 @@ const RightPanel = () => {
         </h2>
         <div className="mb-3.5 flex cursor-pointer items-center hover:scale-[1.02]">
           <img
-            src={Person7}
+            src="/avatars/person7.svg"
             alt="person"
             className="mr-2.5 h-5 w-5 rounded-full"
           />
@@ -147,7 +152,7 @@ const RightPanel = () => {
         </div>
         <div className="mb-3.5 flex cursor-pointer items-center hover:scale-[1.02]">
           <img
-            src={Person8}
+            src="/avatars/person8.svg"
             alt="person"
             className="mr-2.5 h-5 w-5 rounded-full"
           />
@@ -155,7 +160,7 @@ const RightPanel = () => {
         </div>
         <div className="mb-3.5 flex cursor-pointer items-center hover:scale-[1.02]">
           <img
-            src={Person9}
+            src="/avatars/person9.svg"
             alt="person"
             className="mr-2.5 h-5 w-5 rounded-full"
           />
@@ -163,7 +168,7 @@ const RightPanel = () => {
         </div>
         <div className="mb-3.5 flex cursor-pointer items-center hover:scale-[1.02]">
           <img
-            src={Person10}
+            src="/avatars/person10.svg"
             alt="person"
             className="mr-2.5 h-5 w-5 rounded-full"
           />
@@ -171,7 +176,7 @@ const RightPanel = () => {
         </div>
         <div className="mb-3.5 flex cursor-pointer items-center hover:scale-[1.02]">
           <img
-            src={Person11}
+            src="/avatars/person11.svg"
             alt="person"
             className="mr-2.5 h-5 w-5 rounded-full"
           />
@@ -179,7 +184,7 @@ const RightPanel = () => {
         </div>
         <div className="mb-3.5 flex cursor-pointer items-center hover:scale-[1.02]">
           <img
-            src={Person12}
+            src="/avatars/person12.svg"
             alt="person"
             className="mr-2.5 h-5 w-5 rounded-full"
           />

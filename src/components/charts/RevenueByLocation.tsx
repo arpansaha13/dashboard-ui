@@ -1,12 +1,11 @@
 import Card from '../Card.tsx'
-import WorldMapIcon from '../navbar/icons/WorldMap.svg'
 import { countryData } from './data.tsx'
 
 const RevenueByLocation = () => {
   return (
     <Card title="Revenue by Location">
       <div className="flex w-full items-center justify-center">
-        <img src={WorldMapIcon} alt="World Map" className="m-2.5" />
+        <img src="/icons/world-map.svg" alt="World Map" className="m-2.5" />
       </div>
 
       {countryData.map(country => (
