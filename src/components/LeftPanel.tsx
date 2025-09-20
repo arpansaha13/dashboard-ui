@@ -1,27 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
-import ProfileImage from './Images/profile-image.svg'
-import DefaultIcon from './Images/default-icon.svg'
-import EcommerceIcon from './Images/ecommerce-icon.svg'
-import ProjectsIcon from './Images/projects-icon.svg'
-import OnlineCourseIcon from './Images/online-courses-icon.svg'
-import UserprofileIcon from './Images/user-profile-icon.svg'
-import AccountIcon from './Images/account-icon.svg'
-import BlogIcon from './Images/blog-icon.svg'
-import CorporateIcon from './Images/corporate-icon.svg'
-import SocialIcon from './Images/social-icon.svg'
-import DropArrow from './Images/dropArrow.svg'
-import DefaultIconDark from './Images/default-icon-dark.svg'
-import EcommerceIconDark from './Images/ecommerce-dark.svg'
-import ProjectIconDark from './Images/projects-dark.svg'
-import OnlineCourseIconDark from './Images/online-course-dark.svg'
-import UserprofileIconDark from './Images/user-profile-dark.svg'
-import AccountIconDark from './Images/account-dark.svg'
-import BlogIconDark from './Images/blogs-dark.svg'
-import CorporateIconDark from './Images/corporate-dark.svg'
-import SocialIconDark from './Images/social-dark.svg'
-import DropArrowDark from './Images/arrow-dark.svg'
-import { useAppSelector } from '../../store/hooks'
-import { selectIsDark } from '../../store/features/dark/dark.slice'
+import { useAppSelector } from '../store/hooks'
+import { selectIsDark } from '../store/features/dark/dark.slice'
 
 const LeftPanel = () => {
   const isDark = useAppSelector(selectIsDark)
@@ -37,7 +16,7 @@ const LeftPanel = () => {
       <div className="mb-5 flex flex-col text-sm">
         <div className="mt-2.5 flex items-center">
           <img
-            src={ProfileImage}
+            src="/icons/profile-image.svg"
             alt="Profile"
             className="mr-2 h-6 w-6 rounded-full"
           />
@@ -83,7 +62,7 @@ const LeftPanel = () => {
         >
           <div className="border-dark mr-3 h-4 rounded-full border-l-4 dark:border-[#C6C7F8]"></div>
           <img
-            src={isDark ? DefaultIconDark : DefaultIcon}
+            src={isDark ? '/icons/default-dark.svg' : '/icons/default.svg'}
             alt="Default"
             className="size-icon"
           />
@@ -99,7 +78,7 @@ const LeftPanel = () => {
         >
           <div className="border-dark mr-3 h-4 rounded-full border-l-4 dark:border-[#C6C7F8]"></div>
           <img
-            src={isDark ? EcommerceIconDark : EcommerceIcon}
+            src={isDark ? '/icons/ecommerce-dark.svg' : '/icons/ecommerce.svg'}
             alt="eCommerce"
             className="size-icon"
           />
@@ -107,12 +86,12 @@ const LeftPanel = () => {
         </Link>
         <div className="hover:bg-dark/5 flex cursor-pointer items-center gap-2.5 rounded px-3 py-1.5 text-sm">
           <img
-            src={isDark ? DropArrowDark : DropArrow}
+            src={isDark ? '/icons/arrow-dark.svg' : '/icons/dropArrow.svg'}
             alt="Drop Arrow"
             className="size-icon"
           />
           <img
-            src={isDark ? ProjectIconDark : ProjectsIcon}
+            src={isDark ? '/icons/projects-dark.svg' : '/icons/projects.svg'}
             alt="Projects"
             className="size-icon"
           />
@@ -121,12 +100,16 @@ const LeftPanel = () => {
         <div className="hover:bg-dark/5 flex cursor-pointer items-center gap-2.5 rounded px-3 py-1.5 text-sm">
           <img
             className="size-icon"
-            src={isDark ? DropArrowDark : DropArrow}
+            src={isDark ? '/icons/arrow-dark.svg' : '/icons/dropArrow.svg'}
             alt="Drop Arrow"
           />
           <img
             className="size-icon"
-            src={isDark ? OnlineCourseIconDark : OnlineCourseIcon}
+            src={
+              isDark
+                ? '/icons/online-course-dark.svg'
+                : '/icons/online-course.svg'
+            }
             alt="Online Courses"
           />
           <span>Online Courses</span>
@@ -138,12 +121,16 @@ const LeftPanel = () => {
         <div className="hover:bg-dark/5 flex cursor-pointer items-center gap-2.5 rounded px-3 py-1.5 text-sm">
           <img
             className="size-icon"
-            src={isDark ? DropArrowDark : DropArrow}
+            src={isDark ? '/icons/arrow-dark.svg' : '/icons/dropArrow.svg'}
             alt="Drop Arrow"
           />
           <img
             className="size-icon"
-            src={isDark ? UserprofileIconDark : UserprofileIcon}
+            src={
+              isDark
+                ? '/icons/user-profile-dark.svg'
+                : '/icons/user-profile.svg'
+            }
             alt="User Profile"
           />{' '}
           <span>User Profile</span>
@@ -180,12 +167,12 @@ const LeftPanel = () => {
         </Link>
         <div className="hover:bg-dark/5 flex cursor-pointer items-center gap-2.5 rounded px-3 py-1.5 text-sm">
           <img
-            src={isDark ? DropArrowDark : DropArrow}
+            src={isDark ? '/icons/arrow-dark.svg' : '/icons/dropArrow.svg'}
             alt="Drop Arrow"
             className="size-icon"
           />
           <img
-            src={isDark ? AccountIconDark : AccountIcon}
+            src={isDark ? '/icons/account-dark.svg' : '/icons/account.svg'}
             alt="Account"
             className="size-icon"
           />
@@ -193,12 +180,12 @@ const LeftPanel = () => {
         </div>
         <div className="hover:bg-dark/5 flex cursor-pointer items-center gap-2.5 rounded px-3 py-1.5 text-sm">
           <img
-            src={isDark ? DropArrowDark : DropArrow}
+            src={isDark ? '/icons/arrow-dark.svg' : '/icons/dropArrow.svg'}
             alt="Drop Arrow"
             className="size-icon"
           />
           <img
-            src={isDark ? CorporateIconDark : CorporateIcon}
+            src={isDark ? '/icons/corporate-dark.svg' : '/icons/corporate.svg'}
             alt="Corporate"
             className="size-icon"
           />
@@ -206,12 +193,12 @@ const LeftPanel = () => {
         </div>
         <div className="hover:bg-dark/5 flex cursor-pointer items-center gap-2.5 rounded px-3 py-1.5 text-sm">
           <img
-            src={isDark ? DropArrowDark : DropArrow}
+            src={isDark ? '/icons/arrow-dark.svg' : '/icons/dropArrow.svg'}
             alt="Drop Arrow"
             className="size-icon"
           />
           <img
-            src={isDark ? BlogIconDark : BlogIcon}
+            src={isDark ? '/icons/blog-dark.svg' : '/icons/blog.svg'}
             alt="Blog"
             className="size-icon"
           />
@@ -219,12 +206,12 @@ const LeftPanel = () => {
         </div>
         <div className="hover:bg-dark/5 flex cursor-pointer items-center gap-2.5 rounded px-3 py-1.5 text-sm">
           <img
-            src={isDark ? DropArrowDark : DropArrow}
+            src={isDark ? '/icons/arrow-dark.svg' : '/icons/dropArrow.svg'}
             alt="Drop Arrow"
             className="size-icon"
           />
           <img
-            src={isDark ? SocialIconDark : SocialIcon}
+            src={isDark ? '/icons/social-dark.svg' : '/icons/social.svg'}
             alt="Social"
             className="size-icon"
           />

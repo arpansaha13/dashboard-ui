@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import Panel from '../components/Panel'
 import Navbar from '../components/navbar/navbar'
-import LeftPanel from '../components/leftPanel/leftPanel'
+import LeftPanel from '../components/LeftPanel'
 import RightPanel from '../components/rightPanel/rightPanel'
 import { useAppSelector } from '../store/hooks'
 import {
