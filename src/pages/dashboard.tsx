@@ -1,8 +1,8 @@
 import Stats from '../components/Stats'
-import GlobalMap from '../components/charts/GlobalMap'
 import SalesDonutChart from '../components/charts/Sales'
 import RevenueChart from '../components/charts/RevenueChart'
 import TopSellingProductsTable from '../components/charts/TopSelling'
+import RevenueByLocation from '../components/charts/RevenueByLocation'
 import ProjectionsVsActualsChart from '../components/charts/ProjectionsActuals'
 
 const Dashboard = () => {
@@ -16,14 +16,8 @@ const Dashboard = () => {
         <Stats />
       </section>
 
-      <section className="xs:flex-col col-span-2 flex w-full items-center gap-5">
-        <div className="relative w-full overflow-hidden rounded-2xl bg-[#F7F9FB] dark:bg-[#FFFFFF0D]">
-          <h4 className="pt-4 pl-5 text-sm leading-5 font-semibold">
-            Projections vs Actuals
-          </h4>
-
-          <ProjectionsVsActualsChart isDarkMode={false} />
-        </div>
+      <section className="col-span-2">
+        <ProjectionsVsActualsChart isDarkMode={false} />
       </section>
 
       <section className="col-span-3">
@@ -31,7 +25,7 @@ const Dashboard = () => {
       </section>
 
       <section>
-        <GlobalMap />
+        <RevenueByLocation />
       </section>
 
       <section className="col-span-3">

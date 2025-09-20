@@ -1,5 +1,6 @@
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts'
 import { DonutChartdata } from './data.tsx'
+import Card from '../Card.tsx'
 
 const COLORS = DonutChartdata.map(entry => entry.color)
 
@@ -17,8 +18,7 @@ const CustomTooltip = ({ active, payload }: any) => {
 
 const SalesDonutChart = () => {
   return (
-    <div className={`dark:bg-light/5 rounded-xl bg-[#f5f5f5] p-4 text-center`}>
-      <h3 className={`mb-2.5 text-sm font-bold`}>Total Sales</h3>
+    <Card title="Total Sales">
       <ResponsiveContainer width="100%" height={150}>
         <PieChart>
           <Pie
@@ -37,6 +37,7 @@ const SalesDonutChart = () => {
           <Tooltip content={CustomTooltip} />
         </PieChart>
       </ResponsiveContainer>
+
       <div className="text-left text-xs">
         {DonutChartdata.map((entry, index) => (
           <div key={`legend-${index}`} className="mb-2 flex items-center">
@@ -53,7 +54,7 @@ const SalesDonutChart = () => {
           </div>
         ))}
       </div>
-    </div>
+    </Card>
   )
 }
 

@@ -9,7 +9,7 @@ const DefaultLayout = () => {
   return (
     <AppProvider>
       <div className="relative flex">
-        <Panel className="w-[212px] border-r">
+        <Panel className="w-[212px] border-r px-4 py-5">
           <LeftPanel />
         </Panel>
 
@@ -21,7 +21,7 @@ const DefaultLayout = () => {
           </div>
         </div>
 
-        <Panel className="w-[280px] border-l">
+        <Panel className="w-[280px] border-l p-5">
           <RightPanel />
         </Panel>
       </div>

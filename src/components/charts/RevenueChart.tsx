@@ -7,7 +7,9 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from 'recharts'
+import Card from '../Card'
 import { LineChartdata } from './data.tsx'
+import Divider from '../Divider.tsx'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const CustomTooltip = ({ active, payload }: any) => {
@@ -36,58 +38,65 @@ const CustomTooltip = ({ active, payload }: any) => {
 
 const RevenueChart = ({ isDarkMode }: { isDarkMode: boolean }) => {
   return (
-    <ResponsiveContainer width="100%" height={300}>
-      <LineChart
-        data={LineChartdata}
-        margin={{ top: 20, right: 30, bottom: 5 }}
-      >
-        <CartesianGrid
-          strokeDasharray="3 3"
-          vertical={false}
-          stroke="#E0E0E0"
-        />
-        <XAxis
-          dataKey="month"
-          tickLine={false}
-          tick={{
-            fill: isDarkMode ? '#FFFFFF66' : '#1C1C1C66',
-            dy: 12,
-            fontSize: 12,
-          }}
-        />
-        <YAxis
-          tickLine={false}
-          axisLine={false}
-          tickFormatter={value => (value === 0 ? value : `${value}M`)}
-          domain={[0, 30]}
-          ticks={[0, 10, 20, 30]}
-          tick={{
-            fill: isDarkMode ? '#FFFFFF66' : '#1C1C1C66',
-            dx: -12,
-            fontSize: 12,
-          }}
-        />
-        <Tooltip content={CustomTooltip} />
+    <Card>
+      <div className="mb-2.5 flex items-center gap-3">
+        <h3 className="text-sm font-bold">Revenue</h3>
+        <Divider vertical />
+      </div>
 
-        <Line
-          type="monotone"
-          dataKey="currentWeek"
-          stroke={isDarkMode ? '#A8C5DA' : '#000'}
-          strokeWidth={3}
-          dot={false}
-          activeDot={{ r: 5 }}
-          strokeDasharray="5 5"
-        />
-        <Line
-          type="monotone"
-          dataKey="previousWeek"
-          stroke={isDarkMode ? '#C6C7F8' : '#8da4c9'}
-          strokeWidth={3}
-          dot={false}
-          strokeDasharray=""
-        />
-      </LineChart>
-    </ResponsiveContainer>
+      <ResponsiveContainer width="100%" height={300}>
+        <LineChart
+          data={LineChartdata}
+          margin={{ top: 20, right: 30, bottom: 5 }}
+        >
+          <CartesianGrid
+            strokeDasharray="3 3"
+            vertical={false}
+            stroke="#E0E0E0"
+          />
+          <XAxis
+            dataKey="month"
+            tickLine={false}
+            tick={{
+              fill: isDarkMode ? '#FFFFFF66' : '#1C1C1C66',
+              dy: 12,
+              fontSize: 12,
+            }}
+          />
+          <YAxis
+            tickLine={false}
+            axisLine={false}
+            tickFormatter={value => (value === 0 ? value : `${value}M`)}
+            domain={[0, 30]}
+            ticks={[0, 10, 20, 30]}
+            tick={{
+              fill: isDarkMode ? '#FFFFFF66' : '#1C1C1C66',
+              dx: -12,
+              fontSize: 12,
+            }}
+          />
+          <Tooltip content={CustomTooltip} />
+
+          <Line
+            type="monotone"
+            dataKey="currentWeek"
+            stroke={isDarkMode ? '#A8C5DA' : '#000'}
+            strokeWidth={3}
+            dot={false}
+            activeDot={{ r: 5 }}
+            strokeDasharray="5 5"
+          />
+          <Line
+            type="monotone"
+            dataKey="previousWeek"
+            stroke={isDarkMode ? '#C6C7F8' : '#8da4c9'}
+            strokeWidth={3}
+            dot={false}
+            strokeDasharray=""
+          />
+        </LineChart>
+      </ResponsiveContainer>
+    </Card>
   )
 }
 
