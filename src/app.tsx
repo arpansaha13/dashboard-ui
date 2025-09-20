@@ -1,9 +1,24 @@
-import './App.css'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import AppLayout from './layouts/app-layout'
+import Dashboard from './pages/dashboard'
+import Orders from './pages/orders'
 
-function App() {
-  return (
-    'hello'
-  )
-}
+const routes = createBrowserRouter([
+  {
+    element: <AppLayout />,
+    children: [
+      {
+        path: '/',
+        element: <Dashboard />,
+      },
+      {
+        path: 'orders',
+        element: <Orders />,
+      },
+    ],
+  },
+])
 
-export default App
+const AppRoutes = () => <RouterProvider router={routes} />
+
+export default AppRoutes
