@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useContext } from 'react'
+import React, { useState, useMemo } from 'react'
 import {
   Box,
   Table,
@@ -27,6 +27,8 @@ import {
   ChevronLeft,
   ChevronRight,
 } from '@mui/icons-material'
+import { useAppSelector } from '../store/hooks.ts'
+import { selectIsDark } from '../store/features/dark/dark.slice'
 import Person1 from '../components/rightPanel/Images/person1.svg'
 import Person7 from '../components/rightPanel/Images/person7.svg'
 import Person8 from '../components/rightPanel/Images/person8.svg'

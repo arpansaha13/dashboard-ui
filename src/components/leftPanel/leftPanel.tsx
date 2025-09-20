@@ -1,4 +1,3 @@
-import { useContext } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import ProfileImage from './Images/profile-image.svg'
 import DefaultIcon from './Images/default-icon.svg'
@@ -23,14 +22,9 @@ import SocialIconDark from './Images/social-dark.svg'
 import DropArrowDark from './Images/arrow-dark.svg'
 import { useAppSelector } from '../../store/hooks'
 import { selectIsDark } from '../../store/features/dark/dark.slice'
-import { AppContext } from '../../context/AppContext'
 
 const LeftPanel = () => {
   const isDark = useAppSelector(selectIsDark)
-
-  const {
-    sidebarRef, // Accessing the ref from AppContext
-  } = useContext(AppContext)
 
   const location = useLocation()
 
@@ -38,7 +32,7 @@ const LeftPanel = () => {
   const isActive = (path: string) => location.pathname === path
 
   return (
-    <aside ref={sidebarRef}>
+    <aside>
       {/* Logo and Profile Section */}
       <div className="mb-5 flex flex-col text-sm">
         <div className="mt-2.5 flex items-center">
