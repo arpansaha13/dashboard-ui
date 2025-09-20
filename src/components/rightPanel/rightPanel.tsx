@@ -1,4 +1,3 @@
-import { useContext } from 'react'
 import BugIcon from './Images/bug.svg'
 import UserIcon from './Images/User.svg'
 import Broadcast from './Images/Broadcast.svg'
@@ -13,22 +12,15 @@ import Person9 from './Images/person9.svg'
 import Person10 from './Images/person10.svg'
 import Person11 from './Images/person11.svg'
 import Person12 from './Images/person12.svg'
-import { AppContext } from '../../context/AppContext'
 
 const RightPanel = () => {
-  const { rightPanelView, rightSidebarRef } = useContext(AppContext)
-
   return (
-    <aside
-      ref={rightSidebarRef}
-      className={`${
-        rightPanelView ? '' : 'hidden'
-      } border-dark/10 dark:border-light/10 absolute right-0 z-50 h-screen w-full max-w-[280px] border-l p-5 lg:static`}
-    >
+    <aside>
       <div className="mb-5">
         <h2 className="text-dark/40 dark:text-light mt-4 mb-2.5 text-sm font-bold">
           Notifications
         </h2>
+
         <div className="mb-3 flex cursor-pointer items-center hover:scale-[1.02]">
           <div className="mr-2.5 flex h-5 w-5 items-center justify-center rounded-lg bg-[#e3f5ff] p-1">
             <img src={BugIcon} alt="icon" className="size-icon" />
@@ -141,7 +133,6 @@ const RightPanel = () => {
         </div>
       </div>
 
-      {/* Contacts Section */}
       <div className="mb-5">
         <h2 className="text-dark/40 dark:text-light mt-4 mb-2.5 text-sm font-bold">
           Contacts

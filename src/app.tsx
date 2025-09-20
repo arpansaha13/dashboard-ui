@@ -1,11 +1,11 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import AppLayout from './layouts/app-layout'
+import DefaultLayout from './layouts/default'
 import Dashboard from './pages/dashboard'
 import Orders from './pages/orders'
 
 const routes = createBrowserRouter([
   {
-    element: <AppLayout />,
+    element: <DefaultLayout />,
     children: [
       {
         path: '/',

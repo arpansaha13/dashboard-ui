@@ -3,7 +3,7 @@ import { countryData } from './data.tsx'
 
 const GlobalMap = () => {
   return (
-    <div className="xs:w-[87%] bg-dark/5 dark:bg-light/5 w-full rounded-2xl p-6">
+    <div className="bg-dark/5 dark:bg-light/5 h-full rounded-2xl p-6">
       <h4 className="text-center text-sm leading-5 font-semibold">
         Revenue by Location
       </h4>

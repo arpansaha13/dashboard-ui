@@ -12,6 +12,10 @@ body {
   @apply bg-light dark:bg-dark text-dark dark:text-light;
 }
 
+body.dark {
+  color-scheme: dark;
+}
+
 .button-icon {
   @apply flex-shrink-0 cursor-pointer;
 }

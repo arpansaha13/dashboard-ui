@@ -179,7 +179,7 @@ const OrdersTable = () => {
   }, [filteredData.length, totalPages, currentPage])
 
   return (
-    <main className="flex h-full max-h-[90vh] flex-col gap-4 overflow-y-scroll p-5 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+    <main className="flex h-full max-h-[90vh] flex-col gap-4 overflow-y-scroll [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
       <h4 className={isDarkMode ? 'text-light' : 'text-dark'}>Order List</h4>
       <Paper
         elevation={3}

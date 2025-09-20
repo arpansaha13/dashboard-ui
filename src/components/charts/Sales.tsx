@@ -17,12 +17,8 @@ const CustomTooltip = ({ active, payload }: any) => {
 
 const SalesDonutChart = () => {
   return (
-    <div
-      className={`dark:bg-light/5 xs:w-[88%] h-[290px] w-[37%] rounded-xl bg-[#f5f5f5] p-4 text-center`}
-    >
-      <h3 className={`dark:text-light text-dark mb-2.5 text-sm font-bold`}>
-        Total Sales
-      </h3>
+    <div className={`dark:bg-light/5 rounded-xl bg-[#f5f5f5] p-4 text-center`}>
+      <h3 className={`mb-2.5 text-sm font-bold`}>Total Sales</h3>
       <ResponsiveContainer width="100%" height={150}>
         <PieChart>
           <Pie

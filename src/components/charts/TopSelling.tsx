@@ -2,10 +2,8 @@ import { Tableproducts } from './data.tsx'
 
 const TopSellingProductsTable = () => {
   return (
-    <div className="dark:bg-light/5 xs:w-[85%] w-full rounded-xl bg-[#F7F9FB] p-6">
-      <h2 className={`dark:text-light text-dark mb-4 text-sm font-bold`}>
-        Top Selling Products
-      </h2>
+    <div className="dark:bg-light/5 h-full rounded-xl bg-[#F7F9FB] p-6">
+      <h2 className={`mb-4 text-sm font-bold`}>Top Selling Products</h2>
       <table className="w-full border-collapse">
         <thead>
           <tr>
