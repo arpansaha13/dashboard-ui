@@ -1,13 +1,13 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useAppSelector } from '../store/hooks'
 import { selectIsDark } from '../store/features/dark/dark.slice'
+import { Accordion, AccordionButton, AccordionPanel } from './Accordion'
 
 const LeftPanel = () => {
   const isDark = useAppSelector(selectIsDark)
 
   const location = useLocation()
 
-  // Check if the route matches the current path
   const isActive = (path: string) => location.pathname === path
 
   return (
@@ -84,139 +84,129 @@ const LeftPanel = () => {
           />
           <span>eCommerce</span>
         </Link>
-        <div className="hover:bg-dark/5 flex cursor-pointer items-center gap-2.5 rounded px-3 py-1.5 text-sm">
-          <img
-            src={isDark ? '/icons/arrow-dark.svg' : '/icons/dropArrow.svg'}
-            alt="Drop Arrow"
-            className="size-icon"
-          />
-          <img
-            src={isDark ? '/icons/projects-dark.svg' : '/icons/projects.svg'}
-            alt="Projects"
-            className="size-icon"
-          />
-          <span>Projects</span>
-        </div>
-        <div className="hover:bg-dark/5 flex cursor-pointer items-center gap-2.5 rounded px-3 py-1.5 text-sm">
-          <img
-            className="size-icon"
-            src={isDark ? '/icons/arrow-dark.svg' : '/icons/dropArrow.svg'}
-            alt="Drop Arrow"
-          />
-          <img
-            className="size-icon"
-            src={
-              isDark
-                ? '/icons/online-course-dark.svg'
-                : '/icons/online-course.svg'
-            }
-            alt="Online Courses"
-          />
-          <span>Online Courses</span>
-        </div>
+
+        <Accordion>
+          <AccordionButton>
+            <img
+              src={isDark ? '/icons/projects-dark.svg' : '/icons/projects.svg'}
+              alt="Projects"
+              className="size-icon"
+            />
+            <p>Projects</p>
+          </AccordionButton>
+        </Accordion>
+
+        <Accordion>
+          <AccordionButton>
+            <img
+              className="size-icon"
+              src={
+                isDark
+                  ? '/icons/online-course-dark.svg'
+                  : '/icons/online-course.svg'
+              }
+              alt="Online Courses"
+            />
+            <p>Online Courses</p>
+          </AccordionButton>
+        </Accordion>
 
         <div className="text-dark/40 dark:text-light/40 mb-12px mt-[15px] text-sm">
           Pages
         </div>
-        <div className="hover:bg-dark/5 flex cursor-pointer items-center gap-2.5 rounded px-3 py-1.5 text-sm">
-          <img
-            className="size-icon"
-            src={isDark ? '/icons/arrow-dark.svg' : '/icons/dropArrow.svg'}
-            alt="Drop Arrow"
-          />
-          <img
-            className="size-icon"
-            src={
-              isDark
-                ? '/icons/user-profile-dark.svg'
-                : '/icons/user-profile.svg'
-            }
-            alt="User Profile"
-          />{' '}
-          <span>User Profile</span>
-        </div>
-        <Link
-          to="/"
-          className="hover:bg-dark/5 flex items-center gap-2.5 rounded py-1.5 pl-14 text-sm"
-        >
-          Overview
-        </Link>
-        <Link
-          to="/"
-          className="hover:bg-dark/5 flex items-center gap-2.5 rounded py-1.5 pl-14 text-sm"
-        >
-          Projects
-        </Link>
-        <Link
-          to="/"
-          className="hover:bg-dark/5 flex items-center gap-2.5 rounded py-1.5 pl-14 text-sm"
-        >
-          Campaigns
-        </Link>
-        <Link
-          to="/"
-          className="hover:bg-dark/5 flex items-center gap-2.5 rounded py-1.5 pl-14 text-sm"
-        >
-          Documents
-        </Link>
-        <Link
-          to="/"
-          className="hover:bg-dark/5 flex items-center gap-2.5 rounded py-1.5 pl-14 text-sm"
-        >
-          Followers
-        </Link>
-        <div className="hover:bg-dark/5 flex cursor-pointer items-center gap-2.5 rounded px-3 py-1.5 text-sm">
-          <img
-            src={isDark ? '/icons/arrow-dark.svg' : '/icons/dropArrow.svg'}
-            alt="Drop Arrow"
-            className="size-icon"
-          />
-          <img
-            src={isDark ? '/icons/account-dark.svg' : '/icons/account.svg'}
-            alt="Account"
-            className="size-icon"
-          />
-          <span>Account</span>
-        </div>
-        <div className="hover:bg-dark/5 flex cursor-pointer items-center gap-2.5 rounded px-3 py-1.5 text-sm">
-          <img
-            src={isDark ? '/icons/arrow-dark.svg' : '/icons/dropArrow.svg'}
-            alt="Drop Arrow"
-            className="size-icon"
-          />
-          <img
-            src={isDark ? '/icons/corporate-dark.svg' : '/icons/corporate.svg'}
-            alt="Corporate"
-            className="size-icon"
-          />
-          <span>Corporate</span>
-        </div>
-        <div className="hover:bg-dark/5 flex cursor-pointer items-center gap-2.5 rounded px-3 py-1.5 text-sm">
-          <img
-            src={isDark ? '/icons/arrow-dark.svg' : '/icons/dropArrow.svg'}
-            alt="Drop Arrow"
-            className="size-icon"
-          />
-          <img
-            src={isDark ? '/icons/blog-dark.svg' : '/icons/blog.svg'}
-            alt="Blog"
-            className="size-icon"
-          />
-          <span>Blog</span>
-        </div>
-        <div className="hover:bg-dark/5 flex cursor-pointer items-center gap-2.5 rounded px-3 py-1.5 text-sm">
-          <img
-            src={isDark ? '/icons/arrow-dark.svg' : '/icons/dropArrow.svg'}
-            alt="Drop Arrow"
-            className="size-icon"
-          />
-          <img
-            src={isDark ? '/icons/social-dark.svg' : '/icons/social.svg'}
-            alt="Social"
-            className="size-icon"
-          />
-          <span>Social</span>
-        </div>
+
+        <Accordion initialOpen>
+          <AccordionButton>
+            <img
+              className="size-icon"
+              src={
+                isDark
+                  ? '/icons/user-profile-dark.svg'
+                  : '/icons/user-profile.svg'
+              }
+              alt="User Profile"
+            />
+            <p>User Profile</p>
+          </AccordionButton>
+          <AccordionPanel>
+            <Link
+              to="/"
+              className="hover:bg-dark/5 flex items-center gap-2.5 rounded py-1.5 pl-14 text-sm"
+            >
+              Overview
+            </Link>
+            <Link
+              to="/"
+              className="hover:bg-dark/5 flex items-center gap-2.5 rounded py-1.5 pl-14 text-sm"
+            >
+              Projects
+            </Link>
+            <Link
+              to="/"
+              className="hover:bg-dark/5 flex items-center gap-2.5 rounded py-1.5 pl-14 text-sm"
+            >
+              Campaigns
+            </Link>
+            <Link
+              to="/"
+              className="hover:bg-dark/5 flex items-center gap-2.5 rounded py-1.5 pl-14 text-sm"
+            >
+              Documents
+            </Link>
+            <Link
+              to="/"
+              className="hover:bg-dark/5 flex items-center gap-2.5 rounded py-1.5 pl-14 text-sm"
+            >
+              Followers
+            </Link>
+          </AccordionPanel>
+        </Accordion>
+
+        <Accordion>
+          <AccordionButton>
+            <img
+              src={isDark ? '/icons/account-dark.svg' : '/icons/account.svg'}
+              alt="Account"
+              className="size-icon"
+            />
+            <p>Account</p>
+          </AccordionButton>
+        </Accordion>
+
+        <Accordion>
+          <AccordionButton>
+            <img
+              src={
+                isDark ? '/icons/corporate-dark.svg' : '/icons/corporate.svg'
+              }
+              alt="Corporate"
+              className="size-icon"
+            />
+            <p>Corporate</p>
+          </AccordionButton>
+        </Accordion>
+
+        <Accordion>
+          <AccordionButton>
+            <img
+              src={isDark ? '/icons/blog-dark.svg' : '/icons/blog.svg'}
+              alt="Blog"
+              className="size-icon"
+            />
+            <p>Blog</p>
+          </AccordionButton>
+        </Accordion>
+
+        <Accordion>
+          <AccordionButton>
+            <img
+              src={isDark ? '/icons/social-dark.svg' : '/icons/social.svg'}
+              alt="Social"
+              className="size-icon"
+            />
+            <p>Social</p>
+          </AccordionButton>
+        </Accordion>
       </nav>
     </aside>
   )
