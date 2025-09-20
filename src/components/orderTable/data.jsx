@@ -6,7 +6,7 @@ export const initialData = [
     address: 'Meadow Lane Oakland',
     date: 'Just now',
     status: 'In Progress',
-    icon: '/avatars/person7.svg',
+    icon: '/avatars/avatar6.png',
   },
   {
     id: '#CM9802',
@@ -15,7 +15,7 @@ export const initialData = [
     address: 'Larry San Francisco',
     date: 'A minute ago',
     status: 'Complete',
-    icon: '/avatars/person11.svg',
+    icon: '/avatars/avatar10.png',
   },
   {
     id: '#CM9803',
@@ -24,7 +24,7 @@ export const initialData = [
     address: 'Bagwell Avenue Ocala',
     date: '1 hour ago',
     status: 'Pending',
-    icon: '/avatars/person8.svg',
+    icon: '/avatars/avatar7.png',
   },
   {
     id: '#CM9804',
@@ -33,7 +33,7 @@ export const initialData = [
     address: 'Market Street Boston',
     date: 'Yesterday',
     status: 'Approved',
-    icon: '/avatars/person9.svg',
+    icon: '/avatars/avatar8.png',
   },
   {
     id: '#CM9805',
@@ -42,7 +42,7 @@ export const initialData = [
     address: 'Nest Lane Olivette',
     date: 'Feb 2, 2023',
     status: 'Rejected',
-    icon: '/avatars/person10.svg',
+    icon: '/avatars/avatar9.png',
   },
   {
     id: '#CM9801',
@@ -51,7 +51,7 @@ export const initialData = [
     address: 'Meadow Lane Oakland',
     date: 'Just now',
     status: 'In Progress',
-    icon: '/avatars/person7.svg',
+    icon: '/avatars/avatar6.png',
   },
   {
     id: '#CM9802',
@@ -60,7 +60,7 @@ export const initialData = [
     address: 'Larry San Francisco',
     date: 'A minute ago',
     status: 'Complete',
-    icon: '/avatars/person11.svg',
+    icon: '/avatars/avatar10.png',
   },
   {
     id: '#CM9803',
@@ -69,7 +69,7 @@ export const initialData = [
     address: 'Bagwell Avenue Ocala',
     date: '1 hour ago',
     status: 'Pending',
-    icon: '/avatars/person8.svg',
+    icon: '/avatars/avatar7.png',
   },
   {
     id: '#CM9804',
@@ -78,7 +78,7 @@ export const initialData = [
     address: 'Market Street Boston',
     date: 'Yesterday',
     status: 'Approved',
-    icon: '/avatars/person9.svg',
+    icon: '/avatars/avatar8.png',
   },
   {
     id: '#CM9805',
@@ -87,7 +87,7 @@ export const initialData = [
     address: 'Nest Lane Olivette',
     date: 'Feb 2, 2023',
     status: 'Rejected',
-    icon: '/avatars/person10.svg',
+    icon: '/avatars/avatar9.png',
   },
   {
     id: '#CM9801',
@@ -96,7 +96,7 @@ export const initialData = [
     address: 'Meadow Lane Oakland',
     date: 'Just now',
     status: 'In Progress',
-    icon: '/avatars/person7.svg',
+    icon: '/avatars/avatar6.png',
   },
   {
     id: '#CM9802',
@@ -105,7 +105,7 @@ export const initialData = [
     address: 'Larry San Francisco',
     date: 'A minute ago',
     status: 'Complete',
-    icon: '/avatars/person11.svg',
+    icon: '/avatars/avatar10.png',
   },
   {
     id: '#CM9803',
@@ -114,7 +114,7 @@ export const initialData = [
     address: 'Bagwell Avenue Ocala',
     date: '1 hour ago',
     status: 'Pending',
-    icon: '/avatars/person8.svg',
+    icon: '/avatars/avatar7.png',
   },
   {
     id: '#CM9804',
@@ -123,7 +123,7 @@ export const initialData = [
     address: 'Market Street Boston',
     date: 'Yesterday',
     status: 'Approved',
-    icon: '/avatars/person9.svg',
+    icon: '/avatars/avatar8.png',
   },
   {
     id: '#CM9805',
@@ -132,7 +132,7 @@ export const initialData = [
     address: 'Nest Lane Olivette',
     date: 'Feb 2, 2023',
     status: 'Rejected',
-    icon: '/avatars/person10.svg',
+    icon: '/avatars/avatar9.png',
   },
   {
     id: '#CM9801',
@@ -141,7 +141,7 @@ export const initialData = [
     address: 'Meadow Lane Oakland',
     date: 'Just now',
     status: 'In Progress',
-    icon: '/avatars/person7.svg',
+    icon: '/avatars/avatar6.png',
   },
   {
     id: '#CM9802',
@@ -150,7 +150,7 @@ export const initialData = [
     address: 'Larry San Francisco',
     date: 'A minute ago',
     status: 'Complete',
-    icon: '/avatars/person11.svg',
+    icon: '/avatars/avatar10.png',
   },
   {
     id: '#CM9803',
@@ -159,7 +159,7 @@ export const initialData = [
     address: 'Bagwell Avenue Ocala',
     date: '1 hour ago',
     status: 'Pending',
-    icon: '/avatars/person8.svg',
+    icon: '/avatars/avatar7.png',
   },
   {
     id: '#CM9804',
@@ -168,7 +168,7 @@ export const initialData = [
     address: 'Market Street Boston',
     date: 'Yesterday',
     status: 'Approved',
-    icon: '/avatars/person9.svg',
+    icon: '/avatars/avatar8.png',
   },
   {
     id: '#CM9805',
@@ -177,7 +177,7 @@ export const initialData = [
     address: 'Nest Lane Olivette',
     date: 'Feb 2, 2023',
     status: 'Rejected',
-    icon: '/avatars/person10.svg',
+    icon: '/avatars/avatar9.png',
   },
   {
     id: '#CM9801',
@@ -186,7 +186,7 @@ export const initialData = [
     address: 'Meadow Lane Oakland',
     date: 'Just now',
     status: 'In Progress',
-    icon: '/avatars/person7.svg',
+    icon: '/avatars/avatar6.png',
   },
   {
     id: '#CM9802',
@@ -195,7 +195,7 @@ export const initialData = [
     address: 'Larry San Francisco',
     date: 'A minute ago',
     status: 'Complete',
-    icon: '/avatars/person11.svg',
+    icon: '/avatars/avatar10.png',
   },
   {
     id: '#CM9803',
@@ -204,7 +204,7 @@ export const initialData = [
     address: 'Bagwell Avenue Ocala',
     date: '1 hour ago',
     status: 'Pending',
-    icon: '/avatars/person8.svg',
+    icon: '/avatars/avatar7.png',
   },
   {
     id: '#CM9804',
@@ -213,7 +213,7 @@ export const initialData = [
     address: 'Market Street Boston',
     date: 'Yesterday',
     status: 'Approved',
-    icon: '/avatars/person9.svg',
+    icon: '/avatars/avatar8.png',
   },
   {
     id: '#CM9805',
@@ -222,7 +222,7 @@ export const initialData = [
     address: 'Nest Lane Olivette',
     date: 'Feb 2, 2023',
     status: 'Rejected',
-    icon: '/avatars/person10.svg',
+    icon: '/avatars/avatar9.png',
   },
   {
     id: '#CM9801',
@@ -231,7 +231,7 @@ export const initialData = [
     address: 'Meadow Lane Oakland',
     date: 'Just now',
     status: 'In Progress',
-    icon: '/avatars/person7.svg',
+    icon: '/avatars/avatar6.png',
   },
   {
     id: '#CM9802',
@@ -240,7 +240,7 @@ export const initialData = [
     address: 'Larry San Francisco',
     date: 'A minute ago',
     status: 'Complete',
-    icon: '/avatars/person11.svg',
+    icon: '/avatars/avatar10.png',
   },
   {
     id: '#CM9803',
@@ -249,7 +249,7 @@ export const initialData = [
     address: 'Bagwell Avenue Ocala',
     date: '1 hour ago',
     status: 'Pending',
-    icon: '/avatars/person8.svg',
+    icon: '/avatars/avatar7.png',
   },
   {
     id: '#CM9804',
@@ -258,7 +258,7 @@ export const initialData = [
     address: 'Market Street Boston',
     date: 'Yesterday',
     status: 'Approved',
-    icon: '/avatars/person9.svg',
+    icon: '/avatars/avatar8.png',
   },
   {
     id: '#CM9805',
@@ -267,7 +267,7 @@ export const initialData = [
     address: 'Nest Lane Olivette',
     date: 'Feb 2, 2023',
     status: 'Rejected',
-    icon: '/avatars/person10.svg',
+    icon: '/avatars/avatar9.png',
   },
   {
     id: '#CM9801',
@@ -276,7 +276,7 @@ export const initialData = [
     address: 'Meadow Lane Oakland',
     date: 'Just now',
     status: 'In Progress',
-    icon: '/avatars/person7.svg',
+    icon: '/avatars/avatar6.png',
   },
   {
     id: '#CM9802',
@@ -285,7 +285,7 @@ export const initialData = [
     address: 'Larry San Francisco',
     date: 'A minute ago',
     status: 'Complete',
-    icon: '/avatars/person11.svg',
+    icon: '/avatars/avatar10.png',
   },
   {
     id: '#CM9803',
@@ -294,7 +294,7 @@ export const initialData = [
     address: 'Bagwell Avenue Ocala',
     date: '1 hour ago',
     status: 'Pending',
-    icon: '/avatars/person8.svg',
+    icon: '/avatars/avatar7.png',
   },
   {
     id: '#CM9804',
@@ -303,7 +303,7 @@ export const initialData = [
     address: 'Market Street Boston',
     date: 'Yesterday',
     status: 'Approved',
-    icon: '/avatars/person9.svg',
+    icon: '/avatars/avatar8.png',
   },
   {
     id: '#CM9805',
@@ -312,7 +312,7 @@ export const initialData = [
     address: 'Nest Lane Olivette',
     date: 'Feb 2, 2023',
     status: 'Rejected',
-    icon: '/avatars/person10.svg',
+    icon: '/avatars/avatar9.png',
   },
   {
     id: '#CM9801',
@@ -321,7 +321,7 @@ export const initialData = [
     address: 'Meadow Lane Oakland',
     date: 'Just now',
     status: 'In Progress',
-    icon: '/avatars/person7.svg',
+    icon: '/avatars/avatar6.png',
   },
   {
     id: '#CM9802',
@@ -330,7 +330,7 @@ export const initialData = [
     address: 'Larry San Francisco',
     date: 'A minute ago',
     status: 'Complete',
-    icon: '/avatars/person11.svg',
+    icon: '/avatars/avatar10.png',
   },
   {
     id: '#CM9803',
@@ -339,7 +339,7 @@ export const initialData = [
     address: 'Bagwell Avenue Ocala',
     date: '1 hour ago',
     status: 'Pending',
-    icon: '/avatars/person8.svg',
+    icon: '/avatars/avatar7.png',
   },
   {
     id: '#CM9804',
@@ -348,7 +348,7 @@ export const initialData = [
     address: 'Market Street Boston',
     date: 'Yesterday',
     status: 'Approved',
-    icon: '/avatars/person9.svg',
+    icon: '/avatars/avatar8.png',
   },
   {
     id: '#CM9805',
@@ -357,7 +357,7 @@ export const initialData = [
     address: 'Nest Lane Olivette',
     date: 'Feb 2, 2023',
     status: 'Rejected',
-    icon: '/avatars/person10.svg',
+    icon: '/avatars/avatar9.png',
   },
   {
     id: '#CM9801',
@@ -366,7 +366,7 @@ export const initialData = [
     address: 'Meadow Lane Oakland',
     date: 'Just now',
     status: 'In Progress',
-    icon: '/avatars/person7.svg',
+    icon: '/avatars/avatar6.png',
   },
   {
     id: '#CM9802',
@@ -375,7 +375,7 @@ export const initialData = [
     address: 'Larry San Francisco',
     date: 'A minute ago',
     status: 'Complete',
-    icon: '/avatars/person11.svg',
+    icon: '/avatars/avatar10.png',
   },
   {
     id: '#CM9803',
@@ -384,7 +384,7 @@ export const initialData = [
     address: 'Bagwell Avenue Ocala',
     date: '1 hour ago',
     status: 'Pending',
-    icon: '/avatars/person8.svg',
+    icon: '/avatars/avatar7.png',
   },
   {
     id: '#CM9804',
@@ -393,7 +393,7 @@ export const initialData = [
     address: 'Market Street Boston',
     date: 'Yesterday',
     status: 'Approved',
-    icon: '/avatars/person9.svg',
+    icon: '/avatars/avatar8.png',
   },
   {
     id: '#CM9805',
@@ -402,7 +402,7 @@ export const initialData = [
     address: 'Nest Lane Olivette',
     date: 'Feb 2, 2023',
     status: 'Rejected',
-    icon: '/avatars/person10.svg',
+    icon: '/avatars/avatar9.png',
   },
   {
     id: '#CM9801',
@@ -411,7 +411,7 @@ export const initialData = [
     address: 'Meadow Lane Oakland',
     date: 'Just now',
     status: 'In Progress',
-    icon: '/avatars/person7.svg',
+    icon: '/avatars/avatar6.png',
   },
   {
     id: '#CM9802',
@@ -420,7 +420,7 @@ export const initialData = [
     address: 'Larry San Francisco',
     date: 'A minute ago',
     status: 'Complete',
-    icon: '/avatars/person11.svg',
+    icon: '/avatars/avatar10.png',
   },
   {
     id: '#CM9803',
@@ -429,7 +429,7 @@ export const initialData = [
     address: 'Bagwell Avenue Ocala',
     date: '1 hour ago',
     status: 'Pending',
-    icon: '/avatars/person8.svg',
+    icon: '/avatars/avatar7.png',
   },
   {
     id: '#CM9804',
@@ -438,7 +438,7 @@ export const initialData = [
     address: 'Market Street Boston',
     date: 'Yesterday',
     status: 'Approved',
-    icon: '/avatars/person9.svg',
+    icon: '/avatars/avatar8.png',
   },
   {
     id: '#CM9805',
@@ -447,7 +447,7 @@ export const initialData = [
     address: 'Nest Lane Olivette',
     date: 'Feb 2, 2023',
     status: 'Rejected',
-    icon: '/avatars/person10.svg',
+    icon: '/avatars/avatar9.png',
   },
 ]
 

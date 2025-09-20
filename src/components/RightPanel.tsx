@@ -60,7 +60,7 @@ const RightPanel = () => {
         <div className="mb-3 flex cursor-pointer items-start hover:scale-[1.02]">
           <div className="relative mr-2.5 flex flex-col items-center">
             <img
-              src="/avatars/person1.svg"
+              src="/avatars/avatar1.png"
               alt="person"
               className="h-5 w-5 rounded-full"
             />
@@ -76,7 +76,7 @@ const RightPanel = () => {
         <div className="mb-3 flex cursor-pointer items-start hover:scale-[1.02]">
           <div className="relative mr-2.5 flex flex-col items-center">
             <img
-              src="/avatars/person2.svg"
+              src="/avatars/avatar2.png"
               alt="person"
               className="h-5 w-5 rounded-full"
             />
@@ -92,7 +92,7 @@ const RightPanel = () => {
         <div className="mb-3 flex cursor-pointer items-start hover:scale-[1.02]">
           <div className="relative mr-2.5 flex flex-col items-center">
             <img
-              src="/avatars/person6.svg"
+              src="/avatars/avatar5.png"
               alt="person"
               className="h-5 w-5 rounded-full"
             />
@@ -108,7 +108,7 @@ const RightPanel = () => {
         <div className="mb-3 flex cursor-pointer items-start hover:scale-[1.02]">
           <div className="relative mr-2.5 flex flex-col items-center">
             <img
-              src="/avatars/person3.svg"
+              src="/avatars/avatar3.png"
               alt="person"
               className="h-5 w-5 rounded-full"
             />
@@ -124,7 +124,7 @@ const RightPanel = () => {
         <div className="mb-3 flex cursor-pointer items-start hover:scale-[1.02]">
           <div className="relative mr-2.5 flex flex-col items-center">
             <img
-              src="/avatars/person4.svg"
+              src="/avatars/avatar4.png"
               alt="person"
               className="h-5 w-5 rounded-full"
             />
@@ -144,7 +144,7 @@ const RightPanel = () => {
         </h2>
         <div className="mb-3.5 flex cursor-pointer items-center hover:scale-[1.02]">
           <img
-            src="/avatars/person7.svg"
+            src="/avatars/avatar6.png"
             alt="person"
             className="mr-2.5 h-5 w-5 rounded-full"
           />
@@ -152,7 +152,7 @@ const RightPanel = () => {
         </div>
         <div className="mb-3.5 flex cursor-pointer items-center hover:scale-[1.02]">
           <img
-            src="/avatars/person8.svg"
+            src="/avatars/avatar7.png"
             alt="person"
             className="mr-2.5 h-5 w-5 rounded-full"
           />
@@ -160,7 +160,7 @@ const RightPanel = () => {
         </div>
         <div className="mb-3.5 flex cursor-pointer items-center hover:scale-[1.02]">
           <img
-            src="/avatars/person9.svg"
+            src="/avatars/avatar8.png"
             alt="person"
             className="mr-2.5 h-5 w-5 rounded-full"
           />
@@ -168,7 +168,7 @@ const RightPanel = () => {
         </div>
         <div className="mb-3.5 flex cursor-pointer items-center hover:scale-[1.02]">
           <img
-            src="/avatars/person10.svg"
+            src="/avatars/avatar9.png"
             alt="person"
             className="mr-2.5 h-5 w-5 rounded-full"
           />
@@ -176,7 +176,7 @@ const RightPanel = () => {
         </div>
         <div className="mb-3.5 flex cursor-pointer items-center hover:scale-[1.02]">
           <img
-            src="/avatars/person11.svg"
+            src="/avatars/avatar10.png"
             alt="person"
             className="mr-2.5 h-5 w-5 rounded-full"
           />
@@ -184,7 +184,7 @@ const RightPanel = () => {
         </div>
         <div className="mb-3.5 flex cursor-pointer items-center hover:scale-[1.02]">
           <img
-            src="/avatars/person12.svg"
+            src="/avatars/avatar11.png"
             alt="person"
             className="mr-2.5 h-5 w-5 rounded-full"
           />

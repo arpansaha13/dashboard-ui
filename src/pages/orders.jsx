@@ -155,17 +155,17 @@ const OrdersTable = () => {
   const getIconForUser = userName => {
     switch (userName) {
       case 'Natali Craig':
-        return '/avatars/person7.svg'
+        return '/avatars/avatar6.png'
       case 'Kate Morrison':
-        return '/avatars/person8.svg'
+        return '/avatars/avatar7.png'
       case 'Drew Cano':
-        return '/avatars/person9.svg'
+        return '/avatars/avatar8.png'
       case 'Orlando Diggs':
-        return '/avatars/person10.svg'
+        return '/avatars/avatar9.png'
       case 'Andi Lane':
-        return '/avatars/person11.svg'
+        return '/avatars/avatar10.png'
       default:
-        return '/avatars/person1.svg'
+        return '/avatars/avatar1.png'
     }
   }
 
