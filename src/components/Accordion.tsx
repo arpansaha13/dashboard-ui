@@ -65,7 +65,7 @@ export const AccordionButton: React.FC<AccordionButtonProps> = props => {
   return (
     <button
       className={classNames(
-        'hover:bg-dark/5 flex w-full cursor-pointer items-center gap-1.5 rounded px-2.5 py-1.5 text-left text-sm',
+        'hover:bg-dark/5 flex w-full cursor-pointer items-center gap-1.5 rounded py-1.5 text-left text-sm',
         className,
       )}
       onClick={toggle}
