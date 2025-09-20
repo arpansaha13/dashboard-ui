@@ -12,7 +12,7 @@ export const darkSlice = createSlice({
   name: 'dark',
   initialState,
   reducers: create => ({
-    toggle: create.reducer(state => {
+    toggleDark: create.reducer(state => {
       document.body.classList.toggle('dark')
       state.isDark = !state.isDark
     }),
@@ -22,6 +22,6 @@ export const darkSlice = createSlice({
   },
 })
 
-export const { toggle } = darkSlice.actions
+export const { toggleDark } = darkSlice.actions
 
 export const { selectIsDark } = darkSlice.selectors

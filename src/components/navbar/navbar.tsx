@@ -1,4 +1,4 @@
-import { useContext, useRef } from 'react'
+import { useRef } from 'react'
 import { Tooltip } from 'react-tooltip'
 import FavIcon from './icons/fav.svg'
 import LeftPanelView from './icons/Sidebar.svg'
@@ -14,46 +14,28 @@ import NotificationIconDark from './icons/notification-dark.svg'
 import SearchIconImgDark from './icons/search-dark.svg'
 import BreadCrumbs from '../breadCrumbs'
 import { useAppDispatch, useAppSelector } from '../../store/hooks'
-import { selectIsDark, toggle } from '../../store/features/dark/dark.slice'
-import { AppContext } from '../../context/AppContext'
+import { selectIsDark, toggleDark } from '../../store/features/dark/dark.slice'
+import {
+  toggleLeftPanel,
+  toggleRightPanel,
+} from '../../store/features/layout/layout.slice'
 
 function Navbar() {
   const searchRef = useRef(null)
-  const {
-    leftPanelView,
-    setLeftPanelView,
-    rightPanelView,
-    setRightPanelView,
-    isMobile,
-  } = useContext(AppContext)
 
   const dispatch = useAppDispatch()
   const isDark = useAppSelector(selectIsDark)
 
   const handleLeftPanelToggle = () => {
-    if (isMobile) {
-      setLeftPanelView(!leftPanelView)
-      if (!leftPanelView) {
-        setRightPanelView(false)
-      }
-    } else {
-      setLeftPanelView(!leftPanelView)
-    }
+    dispatch(toggleLeftPanel())
   }
 
   const handleRightPanelToggle = () => {
-    if (isMobile) {
-      setRightPanelView(!rightPanelView)
-      if (!rightPanelView) {
-        setLeftPanelView(false)
-      }
-    } else {
-      setRightPanelView(!rightPanelView)
-    }
+    dispatch(toggleRightPanel())
   }
 
   const handleDarkMode = () => {
-    dispatch(toggle())
+    dispatch(toggleDark())
   }
 
   return (
@@ -116,7 +98,7 @@ function Navbar() {
               className="size-icon"
             />
           </button>
-          <button onClick={handleRightPanelToggle} className="button-icon">
+          <button className="button-icon">
             <img
               className="size-icon"
               data-tooltip-id="notificationTooltip"

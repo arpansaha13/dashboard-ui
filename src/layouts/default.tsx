@@ -4,26 +4,40 @@ import Navbar from '../components/navbar/navbar'
 import LeftPanel from '../components/leftPanel/leftPanel'
 import RightPanel from '../components/rightPanel/rightPanel'
 import { AppProvider } from '../context/AppContext'
+import { useAppSelector } from '../store/hooks'
+import {
+  selectLeftPanelOpen,
+  selectRightPanelOpen,
+} from '../store/features/layout/layout.slice'
 
 const DefaultLayout = () => {
+  const leftPanelOpen = useAppSelector(selectLeftPanelOpen)
+  const rightPanelOpen = useAppSelector(selectRightPanelOpen)
+
   return (
     <AppProvider>
       <div className="relative flex">
-        <Panel className="w-[212px] border-r px-4 py-5">
-          <LeftPanel />
-        </Panel>
+        {leftPanelOpen && (
+          <Panel className="w-[212px] border-r px-4 py-5">
+            <LeftPanel />
+          </Panel>
+        )}
 
         <div className="grow">
-          <Navbar />
+          <div className="bg-light dark:bg-dark sticky top-0 z-10">
+            <Navbar />
+          </div>
 
           <div className="p-5">
             <Outlet />
           </div>
         </div>
 
-        <Panel className="w-[280px] border-l p-5">
-          <RightPanel />
-        </Panel>
+        {rightPanelOpen && (
+          <Panel className="w-[280px] border-l p-5">
+            <RightPanel />
+          </Panel>
+        )}
       </div>
     </AppProvider>
   )
