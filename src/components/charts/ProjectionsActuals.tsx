@@ -18,7 +18,7 @@ const ProjectionsVsActualsChart = () => {
   return (
     <Card title="Projections vs Actuals" className="flex flex-col">
       <div className="mt-3 grow">
-        <ResponsiveContainer width="100%" height="100%">
+        <ResponsiveContainer width="100%" height="100%" minHeight={168}>
           <BarChart
             data={BarChartdata}
             barSize={20}

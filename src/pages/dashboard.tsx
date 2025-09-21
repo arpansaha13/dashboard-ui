@@ -7,20 +7,20 @@ import ProjectionsVsActualsChart from '../components/charts/ProjectionsActuals'
 
 const Dashboard = () => {
   return (
-    <main className="grid grid-cols-4 gap-7">
+    <main className="grid grid-cols-1 gap-4 sm:grid-cols-4 sm:gap-7">
       <h4 className="col-span-full text-sm leading-5 font-semibold">
         eCommerce
       </h4>
 
-      <section className="col-span-2 grid grid-cols-2 gap-7">
+      <section className="grid grid-cols-1 gap-4 sm:col-span-2 sm:grid-cols-2 sm:gap-7">
         <Stats />
       </section>
 
-      <section className="col-span-2">
+      <section className="sm:col-span-2">
         <ProjectionsVsActualsChart />
       </section>
 
-      <section className="col-span-3">
+      <section className="sm:col-span-3">
         <RevenueChart />
       </section>
 
@@ -28,7 +28,7 @@ const Dashboard = () => {
         <RevenueByLocation />
       </section>
 
-      <section className="col-span-3">
+      <section className="sm:col-span-3">
         <TopSellingProductsTable />
       </section>
 

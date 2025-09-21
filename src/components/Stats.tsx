@@ -54,14 +54,14 @@ const Stats = () => {
       key={card.title}
       to={card.to}
       className={classNames(
-        'flex h-[112px] items-center justify-start gap-2.5 rounded-2xl p-6 no-underline',
+        'flex h-[112px] items-center justify-start rounded-2xl p-4 no-underline lg:p-6',
         card.color,
       )}
     >
       <div className="w-full">
         <h4 className="text-sm leading-5 font-semibold">{card.title}</h4>
 
-        <div className="flex items-center justify-between">
+        <div className="mt-1.5 flex items-center justify-between">
           <div className="text-2xl font-semibold">{card.count}</div>
 
           <div className="flex items-center gap-[5px] text-xs">

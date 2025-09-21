@@ -44,17 +44,17 @@ const RevenueChart = () => {
 
   return (
     <Card className="flex flex-col">
-      <div className="flex items-center">
+      <div className="sm:flex sm:items-center">
         <h3 className="mr-5 text-sm font-bold">Revenue</h3>
 
-        <Divider vertical />
+        <Divider vertical className="hidden sm:block" />
 
-        <p className="ml-8 flex items-center gap-2 text-xs leading-none">
+        <p className="mt-2 flex items-center gap-2 text-xs leading-none sm:mt-0 sm:ml-6 lg:ml-8">
           <Chip color="#C6C7F8" />
           <span className="block">Current Week</span>{' '}
           <span className="block font-semibold">$58,211</span>
         </p>
-        <p className="ml-8 flex items-center gap-2 text-xs leading-none">
+        <p className="mt-1 flex items-center gap-2 text-xs leading-none sm:mt-0 sm:ml-6 lg:ml-8">
           <Chip color="#A8C5DA" />
           <span className="block">Previous Week</span>
           <span className="block font-semibold">$68,768</span>
@@ -62,7 +62,7 @@ const RevenueChart = () => {
       </div>
 
       <div className="mt-5 grow">
-        <ResponsiveContainer width="100%" height="100%">
+        <ResponsiveContainer width="100%" height="100%" minHeight={232}>
           <LineChart
             data={LineChartdata}
             margin={{ top: 10, right: 0, bottom: 0, left: -16 }}

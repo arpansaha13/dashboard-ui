@@ -13,8 +13,8 @@ const Chip = ({ className, color }: ChipProps) => {
   }, [color])
 
   return (
-    <div
-      className={classNames('size-1.5 rounded-full', className)}
+    <span
+      className={classNames('block size-1.5 rounded-full', className)}
       style={style}
     />
   )
