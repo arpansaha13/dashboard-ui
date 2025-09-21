@@ -28,8 +28,8 @@ function Navbar() {
 
   return (
     <>
-      <nav className="border-dark/10 dark:border-light/10 xs:gap-0 xs:items-center xs:px-7 xs:py-5 flex items-start justify-between gap-[15px] border-b px-4 py-4.5">
-        <div className="xs:gap-4 flex items-center gap-1.5">
+      <nav className="border-dark/10 dark:border-light/10 xs:px-7 flex h-[68px] items-center justify-between border-b px-4">
+        <div className="xs:gap-4 flex items-center gap-3">
           <button onClick={handleLeftPanelToggle} className="button-icon">
             <img
               data-tooltip-id="leftPanelTooltip"
@@ -57,10 +57,11 @@ function Navbar() {
 
           <BreadCrumbs />
         </div>
-        <div className="xs:gap-4 flex items-center gap-5">
-          <div className="xs:block navbar-search-bar relative hidden">
+
+        <div className="xs:gap-5 flex items-center gap-3">
+          <div className="xs:items-center relative hidden sm:flex">
             <img
-              className="size-icon pointer-events-none absolute top-1/2 left-2.5 -translate-y-1/2"
+              className="size-icon pointer-events-none absolute top-1/2 left-2.5 size-4 -translate-y-1/2"
               src={
                 isDark
                   ? '/icons/navbar/search-dark.svg'
@@ -69,12 +70,12 @@ function Navbar() {
               alt="search"
             />
             <input
-              className="dark:bg-light/5 bg-dark/5 placeholder:text-dark/20 dark:placeholder:text-light/20 w-full rounded-lg py-2 pr-16 pl-8 transition-colors outline-none"
+              className="dark:bg-light/5 bg-dark/5 placeholder:text-dark/20 dark:placeholder:text-light/20 h-7 w-full rounded-lg py-1 pr-10 pl-8 text-sm transition-colors outline-none"
               ref={searchRef}
               type="text"
               placeholder="Search"
             />
-            <div className="pointer-events-none absolute top-1/2 right-2.5 -translate-y-1/2 text-[#1C1C1C33] dark:text-[#FFFFFF33]">
+            <div className="text-dark/20 dark:text-light/20 pointer-events-none absolute top-1/2 right-2.5 -translate-y-1/2">
               ⌘ /
             </div>
           </div>
