@@ -153,7 +153,7 @@ const LeftPanel = () => {
           ),
         )}
 
-        <div className="text-dark/40 dark:text-light/40 mb-12px mt-[15px] text-sm">
+        <div className="text-dark/40 dark:text-light/40 mt-[15px] mb-3 text-sm">
           Pages
         </div>
 

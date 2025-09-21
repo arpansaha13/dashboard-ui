@@ -62,11 +62,8 @@ const contacts = [
 const RightPanel = () => {
   return (
     <aside>
-      {/* Notifications */}
       <div className="mb-5">
-        <h2 className="text-dark/40 dark:text-light mt-4 mb-2.5 text-sm font-bold">
-          Notifications
-        </h2>
+        <h2 className="mt-4 mb-2.5 text-sm font-bold">Notifications</h2>
 
         {notifications.map((notification, index) => (
           <div key={index} className="mb-3 flex cursor-pointer items-center">
@@ -83,11 +80,8 @@ const RightPanel = () => {
         ))}
       </div>
 
-      {/* Activities Section */}
       <div className="mb-5">
-        <h2 className="text-dark/40 dark:text-light mt-4 mb-2.5 text-sm font-bold">
-          Activities
-        </h2>
+        <h2 className="mt-4 mb-2.5 text-sm font-bold">Activities</h2>
 
         {activities.map((activity, index) => (
           <div key={index} className="mb-3 flex cursor-pointer items-start">
@@ -111,11 +105,8 @@ const RightPanel = () => {
         ))}
       </div>
 
-      {/* Contacts Section */}
       <div className="mb-5">
-        <h2 className="text-dark/40 dark:text-light mt-4 mb-2.5 text-sm font-bold">
-          Contacts
-        </h2>
+        <h2 className="mt-4 mb-2.5 text-sm font-bold">Contacts</h2>
 
         {contacts.map((contact, index) => (
           <div key={index} className="mb-3.5 flex cursor-pointer items-center">
