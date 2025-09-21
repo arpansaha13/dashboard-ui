@@ -242,6 +242,11 @@ export const PaginationButton: React.FC<PaginationButtonProps> = props => {
         active && 'bg-dark/5 dark:bg-light/5',
       )}
       onClick={onClick}
+      aria-current={active ? 'page' : undefined}
+      aria-label={
+        alt ||
+        (typeof children === 'number' ? `Go to page ${children}` : undefined)
+      }
     >
       {iconSrc ? <img src={iconSrc} alt={alt} /> : children}
     </button>

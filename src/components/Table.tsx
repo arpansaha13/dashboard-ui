@@ -8,7 +8,10 @@ type TableProps = PropsWithChildren<{
 
 export function Table({ children, className }: TableProps) {
   return (
-    <table className={classNames('w-full border-collapse', className)}>
+    <table
+      className={classNames('w-full border-collapse', className)}
+      role="table"
+    >
       {children}
     </table>
   )
@@ -20,7 +23,11 @@ type THeadProps = PropsWithChildren<{
 }>
 
 export function THead({ children, className }: THeadProps) {
-  return <thead className={classNames('', className)}>{children}</thead>
+  return (
+    <thead className={classNames('', className)} role="rowgroup">
+      {children}
+    </thead>
+  )
 }
 
 // TBody
@@ -35,6 +42,7 @@ export function TBody({ children, className }: TBodyProps) {
         'divide-dark/5 dark:divide-light/10 divide-y',
         className,
       )}
+      role="rowgroup"
     >
       {children}
     </tbody>
@@ -47,7 +55,11 @@ type TRowProps = PropsWithChildren<{
 }>
 
 export function TRow({ children, className }: TRowProps) {
-  return <tr className={classNames('h-10', className)}>{children}</tr>
+  return (
+    <tr className={classNames('h-10', className)} role="row">
+      {children}
+    </tr>
+  )
 }
 
 // TCell
@@ -66,6 +78,7 @@ export function TCell({ children, className, isHeader = false }: TCellProps) {
           'dark:text-light/40 text-dark/40 dark:border-light/10 border-b border-[#e5e7eb] text-left font-medium',
         className,
       )}
+      role={isHeader ? 'columnheader' : 'cell'}
     >
       {children}
     </Component>

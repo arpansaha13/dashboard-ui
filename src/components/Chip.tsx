@@ -16,6 +16,7 @@ const Chip = ({ className, color }: ChipProps) => {
     <span
       className={classNames('block size-1.5 rounded-full', className)}
       style={style}
+      aria-hidden={true}
     />
   )
 }

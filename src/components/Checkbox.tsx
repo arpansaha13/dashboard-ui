@@ -19,6 +19,9 @@ export const Checkbox: React.FC<CheckboxProps> = props => {
     <button /* NOSONAR */
       role="checkbox"
       aria-checked={checked}
+      aria-label={
+        partial ? 'Partially checked' : checked ? 'Checked' : 'Unchecked'
+      }
       tabIndex={0}
       onClick={() => onChange(!checked)}
       onKeyDown={e => e.key === 'Enter' && onChange(!checked)}
@@ -31,11 +34,14 @@ export const Checkbox: React.FC<CheckboxProps> = props => {
       {checked && (
         <img
           src={isDark ? '/icons/checkbox_dark.svg' : '/icons/checkbox.svg'}
-          alt=""
+          alt="Checked"
         />
       )}
       {partial && !checked && (
-        <div className="bg-light dark:bg-dark h-0.5 w-1.5 rounded-sm" />
+        <div
+          className="bg-light dark:bg-dark h-0.5 w-1.5 rounded-sm"
+          aria-label="Indeterminate"
+        />
       )}
     </button>
   )

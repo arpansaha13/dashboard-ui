@@ -46,6 +46,7 @@ const Drawer = (props: DrawerProps) => {
                 ? 'right-0 pl-10 sm:pl-16'
                 : 'left-0 pr-10 sm:pr-16',
             )}
+            aria-label={direction === 'right' ? 'Right Drawer' : 'Left Drawer'}
           >
             <DialogPanel
               transition

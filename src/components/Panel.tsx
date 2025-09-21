@@ -14,6 +14,8 @@ const Panel = (props: PanelProps) => {
         className,
         'border-dark/10 dark:border-light/10 sticky top-0 hidden h-screen overflow-y-auto lg:block',
       )}
+      role="complementary"
+      aria-label="Panel"
     >
       {children}
     </div>

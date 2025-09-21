@@ -38,7 +38,9 @@ export const Accordion: React.FC<AccordionProps> = ({
 
   return (
     <AccordionContext.Provider value={value}>
-      <div className={className}>{children}</div>
+      <div className={className} aria-expanded={isOpen}>
+        {children}
+      </div>
     </AccordionContext.Provider>
   )
 }
@@ -71,6 +73,8 @@ export const AccordionButton: React.FC<AccordionButtonProps> = props => {
       onClick={toggle}
       tabIndex={0}
       onKeyDown={e => e.key === 'Enter' && toggle()}
+      aria-expanded={isOpen}
+      aria-controls="accordion-panel"
     >
       <img
         className={classNames('size-icon', isOpen ? 'rotate-90' : '')}
@@ -97,5 +101,9 @@ export const AccordionPanel: React.FC<AccordionPanelProps> = props => {
     return null
   }
 
-  return <div className={className}>{children}</div>
+  return (
+    <div className={className} id="accordion-panel" aria-hidden={!isOpen}>
+      {children}
+    </div>
+  )
 }
