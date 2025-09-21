@@ -27,18 +27,18 @@ interface Order {
 }
 
 const columnHeaders = [
-  { name: 'Order ID', key: 'id' },
-  { name: 'User', key: 'user' },
-  { name: 'Project', key: 'project' },
-  { name: 'Address', key: 'address' },
-  { name: 'Date', key: 'date' },
-  { name: 'Status', key: 'status' },
+  { name: 'Order ID', key: 'id', className: '' },
+  { name: 'User', key: 'user', className: '' },
+  { name: 'Project', key: 'project', className: 'hidden md:table-cell' },
+  { name: 'Address', key: 'address', className: 'hidden md:table-cell' },
+  { name: 'Date', key: 'date', className: 'hidden md:table-cell' },
+  { name: 'Status', key: 'status', className: '' },
 ]
 
 const Orders = () => {
   const isDark = useAppSelector(selectIsDark)
 
-  const checked = useSet<string>(['#CM9813']) // for example
+  const checked = useSet<string>(['#CM9803']) // for example
   const [orders] = useState<Order[]>(initialData)
   const [currentPage, setCurrentPage] = useState(1)
   const ROWS_PER_PAGE = 10
@@ -64,14 +64,14 @@ const Orders = () => {
       <Table>
         <THead>
           <TRow>
-            <TCell>
+            <TCell className="w-6">
               <Checkbox
                 checked={checked.size === orders.length}
                 onChange={handleToggleAll}
               />
             </TCell>
             {columnHeaders.map(header => (
-              <TCell key={header.key} isHeader className="capitalize">
+              <TCell key={header.key} isHeader className={header.className}>
                 {header.name}
               </TCell>
             ))}
@@ -89,7 +89,7 @@ const Orders = () => {
                   }}
                   className={classNames(
                     !checked.has(order.id) &&
-                      'opacity-0 transition-opacity group-hover:opacity-100',
+                      'lg:opacity-0 lg:transition-opacity lg:group-hover:opacity-100',
                   )}
                 />
               </TCell>
@@ -100,9 +100,9 @@ const Orders = () => {
                   {order.user}
                 </div>
               </TCell>
-              <TCell>{order.project}</TCell>
-              <TCell>{order.address}</TCell>
-              <TCell>
+              <TCell className="hidden md:table-cell">{order.project}</TCell>
+              <TCell className="hidden md:table-cell">{order.address}</TCell>
+              <TCell className="hidden md:table-cell">
                 <div className="flex items-center gap-1">
                   <img
                     src={
