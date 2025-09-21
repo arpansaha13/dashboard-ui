@@ -65,59 +65,74 @@ const RightPanel = () => {
       <div className="mb-5">
         <h2 className="mt-4 mb-2.5 text-sm font-bold">Notifications</h2>
 
-        {notifications.map((notification, index) => (
-          <div key={index} className="mb-3 flex cursor-pointer items-center">
-            <div className="mr-2.5 flex h-5 w-5 items-center justify-center rounded-lg bg-[#e3f5ff] p-1">
-              <img src={notification.icon} alt="icon" className="size-icon" />
-            </div>
-            <div className="overflow-hidden text-sm text-ellipsis whitespace-nowrap">
-              {notification.text}
-              <div className="text-dark/40 dark:text-light/40 mt-0.5 text-[11px]">
-                {notification.time}
+        <ul className="space-y-3">
+          {notifications.map((notification, index) => (
+            <li
+              key={index}
+              className="hover:bg-dark/5 dark:hover:bg-light/5 -mx-1 flex cursor-pointer items-center rounded px-1 transition-colors"
+            >
+              <div className="mr-2.5 flex h-5 w-5 items-center justify-center rounded-lg bg-[#e3f5ff] p-1">
+                <img src={notification.icon} alt="icon" className="size-icon" />
               </div>
-            </div>
-          </div>
-        ))}
+              <div className="overflow-hidden text-sm text-ellipsis whitespace-nowrap">
+                {notification.text}
+                <div className="text-dark/40 dark:text-light/40 mt-0.5 text-[11px]">
+                  {notification.time}
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
 
       <div className="mb-5">
         <h2 className="mt-4 mb-2.5 text-sm font-bold">Activities</h2>
 
-        {activities.map((activity, index) => (
-          <div key={index} className="mb-3 flex cursor-pointer items-start">
-            <div className="relative mr-2.5 flex flex-col items-center">
-              <img
-                src={activity.avatar}
-                alt="person"
-                className="h-5 w-5 rounded-full"
-              />
-              {!activity.isLast && (
-                <div className="bg-dark/10 dark:bg-light/10 absolute top-[27px] bottom-[-20px] left-[9px] w-[1px] grow"></div>
-              )}
-            </div>
-            <div className="text-sm">
-              {activity.text}
-              <div className="text-dark/40 dark:text-light/40 mt-0.5 text-[11px]">
-                {activity.time}
+        <ul className="space-y-1">
+          {activities.map((activity, index) => (
+            <li
+              key={index}
+              className="hover:bg-dark/5 dark:hover:bg-light/5 -mx-1 flex cursor-pointer items-start rounded p-1 transition-colors"
+            >
+              <div className="relative mr-2.5 flex flex-col items-center">
+                <img
+                  src={activity.avatar}
+                  alt="person"
+                  className="h-5 w-5 rounded-full"
+                />
+                {!activity.isLast && (
+                  <div className="bg-dark/10 dark:bg-light/10 absolute top-[27px] bottom-[-20px] left-[9px] w-[1px] grow"></div>
+                )}
               </div>
-            </div>
-          </div>
-        ))}
+              <div className="text-sm">
+                {activity.text}
+                <div className="text-dark/40 dark:text-light/40 mt-0.5 text-[11px]">
+                  {activity.time}
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
 
       <div className="mb-5">
         <h2 className="mt-4 mb-2.5 text-sm font-bold">Contacts</h2>
 
-        {contacts.map((contact, index) => (
-          <div key={index} className="mb-3.5 flex cursor-pointer items-center">
-            <img
-              src={contact.avatar}
-              alt="person"
-              className="mr-2.5 h-5 w-5 rounded-full"
-            />
-            <div className="text-sm">{contact.name}</div>
-          </div>
-        ))}
+        <ul className="space-y-1">
+          {contacts.map((contact, index) => (
+            <li
+              key={index}
+              className="hover:bg-dark/5 dark:hover:bg-light/5 -mx-1 flex cursor-pointer items-center rounded p-1 transition-colors"
+            >
+              <img
+                src={contact.avatar}
+                alt="person"
+                className="mr-2.5 size-6 rounded-full"
+              />
+              <div className="text-sm">{contact.name}</div>
+            </li>
+          ))}
+        </ul>
       </div>
     </aside>
   )
