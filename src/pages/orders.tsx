@@ -39,7 +39,7 @@ const Orders = () => {
   const isDark = useAppSelector(selectIsDark)
 
   const checked = useSet<string>(['#CM9803']) // for example
-  const [orders] = useState<Order[]>(initialData)
+  const [orders] = useState<Order[]>(initialData as Order[])
   const [currentPage, setCurrentPage] = useState(1)
   const ROWS_PER_PAGE = 10
 
