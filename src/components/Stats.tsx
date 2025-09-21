@@ -54,7 +54,7 @@ const Stats = () => {
       key={card.title}
       to={card.to}
       className={classNames(
-        'flex items-center justify-start gap-2.5 rounded-2xl p-6 no-underline',
+        'flex h-[112px] items-center justify-start gap-2.5 rounded-2xl p-6 no-underline',
         card.color,
       )}
     >

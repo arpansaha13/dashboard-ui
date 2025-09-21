@@ -8,7 +8,7 @@ export const BarChartdata = [
 ]
 
 export const DonutChartdata = [
-  { name: 'Direct', value: 300.56, color: '#1C1C1C' },
+  { name: 'Direct', value: 300.56, color: '#C6C7F8' },
   { name: 'Affiliate', value: 135.18, color: '#BAEDBD' },
   { name: 'Sponsored', value: 154.02, color: '#95A4FC' },
   { name: 'E-mail', value: 48.96, color: '#B1E3FF' },

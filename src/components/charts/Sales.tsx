@@ -1,6 +1,7 @@
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts'
 import { DonutChartdata } from './data.tsx'
 import Card from '../Card.tsx'
+import Chip from '../Chip.tsx'
 
 const COLORS = DonutChartdata.map(entry => entry.color)
 
@@ -18,8 +19,8 @@ const CustomTooltip = ({ active, payload }: any) => {
 
 const SalesDonutChart = () => {
   return (
-    <Card title="Total Sales">
-      <ResponsiveContainer width="100%" height={150}>
+    <Card title="Total Sales" className="">
+      <ResponsiveContainer width={120} height={120} className="mx-auto my-4">
         <PieChart>
           <Pie
             data={DonutChartdata}
@@ -30,7 +31,7 @@ const SalesDonutChart = () => {
             dataKey="value"
             paddingAngle={0}
           >
-            {DonutChartdata.map((entry, index) => (
+            {DonutChartdata.map((_, index) => (
               <Cell key={`cell-${index}`} fill={COLORS[index]} />
             ))}
           </Pie>
@@ -38,22 +39,20 @@ const SalesDonutChart = () => {
         </PieChart>
       </ResponsiveContainer>
 
-      <div className="text-left text-xs">
+      <ul className="mx-3.5 space-y-4 text-xs">
         {DonutChartdata.map((entry, index) => (
-          <div key={`legend-${index}`} className="mb-2 flex items-center">
-            <span
-              className="mr-2 inline-block h-2 w-2 rounded-full"
-              style={{ backgroundColor: entry.color }}
-            />
-            <span className="dark:text-light/80 flex-1 text-sm text-[#555]">
-              {entry.name}
-            </span>
-            <span className="dark:text-light text-sm text-[#333]">
-              ${entry.value.toFixed(2)}
-            </span>
-          </div>
+          <li
+            key={`legend-${index}`}
+            className="flex items-center justify-between"
+          >
+            <div className="flex items-center gap-1.5">
+              <Chip color={entry.color} />
+              <p className="leading-none">{entry.name}</p>
+            </div>
+            <p>${entry.value.toFixed(2)}</p>
+          </li>
         ))}
-      </div>
+      </ul>
     </Card>
   )
 }

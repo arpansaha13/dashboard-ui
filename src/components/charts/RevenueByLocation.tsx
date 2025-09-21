@@ -4,11 +4,11 @@ import { countryData } from './data.tsx'
 const RevenueByLocation = () => {
   return (
     <Card title="Revenue by Location">
-      <div className="flex w-full items-center justify-center">
-        <img src="/icons/world-map.svg" alt="World Map" className="m-2.5" />
+      <div className="mt-4 mb-3">
+        <img src="/icons/world-map.svg" alt="World Map" className="w-full" />
       </div>
 
-      <ul className="space-y-3.5">
+      <ul className="space-y-4">
         {countryData.map(country => (
           <li key={country.name}>
             <div className="flex items-center justify-between text-xs">
