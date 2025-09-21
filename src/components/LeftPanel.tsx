@@ -178,7 +178,7 @@ const LeftPanel = () => {
                   <Link
                     key={childIndex}
                     to={child.path}
-                    className="hover:bg-dark/5 flex items-center gap-2.5 rounded py-1.5 pl-14 text-sm"
+                    className="hover:bg-dark/5 flex items-center gap-2.5 rounded py-1.5 pl-[46px] text-sm"
                   >
                     {child.text}
                   </Link>

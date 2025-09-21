@@ -3,13 +3,17 @@ import Panel from '../components/Panel'
 import Navbar from '../components/Navbar'
 import LeftPanel from '../components/LeftPanel'
 import RightPanel from '../components/RightPanel'
-import { useAppSelector } from '../store/hooks'
+import { useAppDispatch, useAppSelector } from '../store/hooks'
 import {
   selectLeftPanelOpen,
   selectRightPanelOpen,
+  toggleLeftPanel,
+  toggleRightPanel,
 } from '../store/features/layout/layout.slice'
+import Drawer from '../components/Drawer'
 
 const DefaultLayout = () => {
+  const dispatch = useAppDispatch()
   const leftPanelOpen = useAppSelector(selectLeftPanelOpen)
   const rightPanelOpen = useAppSelector(selectRightPanelOpen)
 
@@ -36,6 +40,24 @@ const DefaultLayout = () => {
           <RightPanel />
         </Panel>
       )}
+
+      <Drawer
+        open={leftPanelOpen}
+        setOpen={() => dispatch(toggleLeftPanel())}
+        className="lg:hidden"
+        direction="left"
+      >
+        <LeftPanel />
+      </Drawer>
+
+      <Drawer
+        open={rightPanelOpen}
+        setOpen={() => dispatch(toggleRightPanel())}
+        className="lg:hidden"
+        direction="right"
+      >
+        <RightPanel />
+      </Drawer>
     </div>
   )
 }
