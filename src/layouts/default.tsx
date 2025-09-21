@@ -12,14 +12,13 @@ import {
 } from '../store/features/layout/layout.slice'
 import Drawer from '../components/Drawer'
 import { useWindowSize } from '../hooks/useWindowSize'
+import { LG_BREAKPOINT } from '../constants'
 
 const DefaultLayout = () => {
   const dispatch = useAppDispatch()
   const leftPanelOpen = useAppSelector(selectLeftPanelOpen)
   const rightPanelOpen = useAppSelector(selectRightPanelOpen)
   const { width } = useWindowSize()
-
-  const LG_BREAKPOINT = 1024
 
   return (
     <div className="relative flex">

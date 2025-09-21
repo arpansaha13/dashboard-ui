@@ -7,9 +7,12 @@ import {
   toggleLeftPanel,
   toggleRightPanel,
 } from '../store/features/layout/layout.slice'
+import { useWindowSize } from '../hooks/useWindowSize'
+import { LG_BREAKPOINT } from '../constants'
 
 function Navbar() {
   const searchRef = useRef(null)
+  const { width } = useWindowSize()
 
   const dispatch = useAppDispatch()
   const isDark = useAppSelector(selectIsDark)
@@ -134,12 +137,16 @@ function Navbar() {
         </div>
       </nav>
 
-      <Tooltip id="leftPanelTooltip" />
-      <Tooltip id="favTooltip" />
-      <Tooltip id="themeTooltip" />
-      <Tooltip id="recentTooltip" />
-      <Tooltip id="notificationTooltip" />
-      <Tooltip id="rightPanelTooltip" />
+      {width > LG_BREAKPOINT && (
+        <>
+          <Tooltip id="leftPanelTooltip" />
+          <Tooltip id="favTooltip" />
+          <Tooltip id="themeTooltip" />
+          <Tooltip id="recentTooltip" />
+          <Tooltip id="notificationTooltip" />
+          <Tooltip id="rightPanelTooltip" />
+        </>
+      )}
     </>
   )
 }
