@@ -16,6 +16,16 @@ enum OrderStatus {
   COMPLETED = 'COMPLETED',
 }
 
+interface Order {
+  id: string
+  user: string
+  project: string
+  address: string
+  date: string
+  status: OrderStatus
+  avatar: string
+}
+
 const columnHeaders = [
   { name: 'Order ID', key: 'id' },
   { name: 'User', key: 'user' },
@@ -28,14 +38,22 @@ const columnHeaders = [
 const Orders = () => {
   const isDark = useAppSelector(selectIsDark)
 
-  const checked = useSet<string>()
-  const [orders] = useState(initialData)
+  const checked = useSet<string>(['#CM9813']) // for example
+  const [orders] = useState<Order[]>(initialData)
+  const [currentPage, setCurrentPage] = useState(1)
+  const ROWS_PER_PAGE = 10
+
+  const pageCount = Math.ceil(orders.length / ROWS_PER_PAGE)
+  const paginatedOrders = orders.slice(
+    (currentPage - 1) * ROWS_PER_PAGE,
+    currentPage * ROWS_PER_PAGE,
+  )
 
   const handleToggleAll = useCallback(() => {
     if (checked.size === orders.length) {
       checked.clear()
     } else {
-      checked.add(orders.map(order => order.id))
+      checked.add(orders.map((order: { id: string }) => order.id))
     }
   }, [checked, orders])
 
@@ -49,7 +67,6 @@ const Orders = () => {
             <TCell>
               <Checkbox
                 checked={checked.size === orders.length}
-                partial={checked.size > 0}
                 onChange={handleToggleAll}
               />
             </TCell>
@@ -62,7 +79,7 @@ const Orders = () => {
         </THead>
 
         <TBody>
-          {orders.map(order => (
+          {paginatedOrders.map(order => (
             <TRow key={order.id} className="group">
               <TCell>
                 <Checkbox
@@ -105,6 +122,40 @@ const Orders = () => {
           ))}
         </TBody>
       </Table>
+
+      <div className="mt-4 flex items-center justify-end gap-2">
+        <PaginationButton
+          onClick={() => setCurrentPage(page => page - 1)}
+          disabled={currentPage === 1}
+          iconSrc={
+            isDark
+              ? '/icons/arrows/arrow_left_dark.svg'
+              : '/icons/arrows/arrow_left.svg'
+          }
+          alt="Previous page"
+        />
+
+        {Array.from({ length: pageCount }, (_, i) => i + 1).map(page => (
+          <PaginationButton
+            key={page}
+            onClick={() => setCurrentPage(page)}
+            active={currentPage === page}
+          >
+            {page}
+          </PaginationButton>
+        ))}
+
+        <PaginationButton
+          onClick={() => setCurrentPage(page => page + 1)}
+          disabled={currentPage === pageCount}
+          iconSrc={
+            isDark
+              ? '/icons/arrows/arrow_right_dark.svg'
+              : '/icons/arrows/arrow_right.svg'
+          }
+          alt="Next page"
+        />
+      </div>
     </main>
   )
 }
@@ -158,5 +209,41 @@ function OrderStatusBadge(props: OrderStatusBadgeProps) {
     >
       Rejected
     </Badge>
+  )
+}
+
+type PaginationButtonProps = {
+  onClick: () => void
+  disabled?: boolean
+  active?: boolean
+  children?: React.ReactNode
+  iconSrc?: string
+  alt?: string
+}
+
+export const PaginationButton: React.FC<PaginationButtonProps> = props => {
+  const {
+    onClick,
+    disabled = false,
+    active = false,
+    children,
+    iconSrc,
+    alt = '',
+  } = props
+
+  return (
+    <button
+      disabled={disabled}
+      className={classNames(
+        'flex h-8 w-8 items-center justify-center rounded-lg text-sm',
+        disabled
+          ? 'cursor-not-allowed opacity-50'
+          : 'hover:bg-dark/5 dark:hover:bg-light/5',
+        active && 'bg-dark/5 dark:bg-light/5',
+      )}
+      onClick={onClick}
+    >
+      {iconSrc ? <img src={iconSrc} alt={alt} /> : children}
+    </button>
   )
 }
