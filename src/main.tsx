@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { Provider } from 'react-redux'
 import { createRoot } from 'react-dom/client'
 import { store } from './store'
-import AppRoutes from './App'
+import AppRoutes from './app'
 import './index.css'
 
 const container = document.getElementById('root')
