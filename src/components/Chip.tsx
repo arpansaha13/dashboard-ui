@@ -1,10 +1,22 @@
+import { useMemo } from 'react'
+import { classNames } from '../utils'
+
 interface ChipProps {
-  color: string
+  className?: string
+  color?: string
 }
 
-const Chip = ({ color }: ChipProps) => {
+const Chip = ({ className, color }: ChipProps) => {
+  const style = useMemo(() => {
+    if (color) return { backgroundColor: color }
+    return {}
+  }, [color])
+
   return (
-    <div className="size-1.5 rounded-full" style={{ backgroundColor: color }} />
+    <div
+      className={classNames('size-1.5 rounded-full', className)}
+      style={style}
+    />
   )
 }
 
