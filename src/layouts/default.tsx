@@ -11,11 +11,15 @@ import {
   toggleRightPanel,
 } from '../store/features/layout/layout.slice'
 import Drawer from '../components/Drawer'
+import { useWindowSize } from '../hooks/useWindowSize'
 
 const DefaultLayout = () => {
   const dispatch = useAppDispatch()
   const leftPanelOpen = useAppSelector(selectLeftPanelOpen)
   const rightPanelOpen = useAppSelector(selectRightPanelOpen)
+  const { width } = useWindowSize()
+
+  const LG_BREAKPOINT = 1024
 
   return (
     <div className="relative flex">
@@ -41,23 +45,27 @@ const DefaultLayout = () => {
         </Panel>
       )}
 
-      <Drawer
-        open={leftPanelOpen}
-        setOpen={() => dispatch(toggleLeftPanel())}
-        className="lg:hidden"
-        direction="left"
-      >
-        <LeftPanel />
-      </Drawer>
+      {width < LG_BREAKPOINT && (
+        <>
+          <Drawer
+            open={leftPanelOpen}
+            setOpen={() => dispatch(toggleLeftPanel())}
+            className="lg:hidden"
+            direction="left"
+          >
+            <LeftPanel />
+          </Drawer>
 
-      <Drawer
-        open={rightPanelOpen}
-        setOpen={() => dispatch(toggleRightPanel())}
-        className="lg:hidden"
-        direction="right"
-      >
-        <RightPanel />
-      </Drawer>
+          <Drawer
+            open={rightPanelOpen}
+            setOpen={() => dispatch(toggleRightPanel())}
+            className="lg:hidden"
+            direction="right"
+          >
+            <RightPanel />
+          </Drawer>
+        </>
+      )}
     </div>
   )
 }
