@@ -59,7 +59,25 @@ const Orders = () => {
 
   return (
     <main>
-      <h4>Order List</h4>
+      <h4 className="mb-4">Order List</h4>
+
+      <div className="dark:bg-light/5 mb-4 flex h-11 items-center gap-4 rounded-xl bg-[#f7f9fB] px-3.5">
+        <img
+          src={isDark ? '/icons/plus_dark.svg' : '/icons/plus.svg'}
+          alt="Add"
+          className="size-5"
+        />
+        <img
+          src={isDark ? '/icons/filter_dark.svg' : '/icons/filter.svg'}
+          alt="Filter"
+          className="size-5"
+        />
+        <img
+          src={isDark ? '/icons/sort_dark.svg' : '/icons/sort.svg'}
+          alt="Sort"
+          className="size-5"
+        />
+      </div>
 
       <Table>
         <THead>
